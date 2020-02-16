@@ -6,11 +6,33 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 18:13:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/11 20:18:30 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/16 12:44:09 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+/*
+** Выбирается цвет текущего пикселя в зависимости от положения точки
+** относительно минимального и максимального значения координаты z.
+*/
+
+int 		ft_get_default_color(int z, t_fdf *fdf)
+{
+	double 	percent;
+
+	percent = ft_get_default_color((fdf->z_min, fdf->z_max, z));
+	if (percent < 0.2)
+		return ((fdf->control->color) ? COLOR_SUN : COLOR_SKY);
+	else if (percent < 0.4)
+		return ((fdf->control->color) ? COLOR_ACID_GR : COLOR_BLOOD);
+	else if (percent < 0.6)
+		return ((fdf->control->color) ? COLOR_GREEN : COLOR_PINK);
+	else if (percent < 0.8)
+		return ((fdf->control->color) ? COLOR_SKY : COLOR_JAFFA);
+	else
+		return ((fdf->control->color) ? COLOR_WATER : COLOR_ORANGE);
+}
 
 /*
 ** Находим текущую позицию точки между двумя точками с известными цветами.

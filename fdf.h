@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:01:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/11 19:45:50 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/16 12:44:09 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,16 @@
 # define BACKGROUND			0xFFFFFF
 # define FT_ABS(X) (((X) < 0) ? (-(X)) : (X))
 
+# define COLOR_WATER		0x00F7FF
+# define COLOR_GREEN		0x00FF00
+# define COLOR_SUN			0xF3FF00
+# define COLOR_SKY			0x14FCF2
+# define COLOR_BLOOD		0xFF0000
+# define COLOR_PINK			0xEC4B27
+# define COLOR_JAFFA		0xEF8633
+# define COLOR_ORANGE		0xF3AF3D
+# define COLOR_ACID_GR		0x80FF00
+
 typedef struct				s_point
 {
 	int						x;
@@ -51,6 +61,20 @@ typedef struct				s_coord
 	int 					color;
 	struct	s_coord			*next;
 }							t_coord;
+
+typedef struct				s_control
+{
+	int 					projection;
+	int						zoom;
+	double 					alf;
+	double 					bet;
+	double					gam;
+	float 					z_altitude;
+	int 					x_move;
+	int 					y_move;
+	int						color;
+	int 					menu;
+}							t_control;
 
 typedef struct				s_fdf
 {
@@ -68,7 +92,11 @@ typedef struct				s_fdf
 	int						z_min;
 	int 					z_max;
 	size_t 					size;
+	t_control				*control;
+	//t_mouse					*mouse;
 }							t_fdf;
+
+
 
 void						fdf_exit(char *s);
 t_fdf						*fdf_init(void);
@@ -78,6 +106,7 @@ int							ft_check_color(const char *str, int ptr, int i);
 t_fdf						*ft_mlx_init(t_fdf *fdf);
 void						ft_draw(t_fdf *fdf);
 int 						f_color(t_point cur, t_point start, t_point end, t_point d);
-
+int 						ft_get_default_color(int z, t_fdf *fdf);
+t_point						project(int x, int y,t_fdf *fdf);
 
 #endif
