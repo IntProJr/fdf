@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fdf.dir/draw_map.c.o"
   "CMakeFiles/fdf.dir/exit.c.o"
   "CMakeFiles/fdf.dir/give_color.c.o"
+  "CMakeFiles/fdf.dir/init_struct.c.o"
   "CMakeFiles/fdf.dir/initialize.c.o"
   "CMakeFiles/fdf.dir/libft/sources/ft_atoi.c.o"
   "CMakeFiles/fdf.dir/libft/sources/ft_atoi_base.c.o"

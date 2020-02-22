@@ -39,7 +39,7 @@ add_executable(fdf
 		./libft/sources/ft_strdel.c
 		draw_map.c
 		projection.c
-		give_color.c libft/sources/ft_wordcount.c libft/sources/ft_clear_mass.c)
+		give_color.c libft/sources/ft_wordcount.c libft/sources/ft_clear_mass.c init_struct.c)
 
 target_link_libraries(fdf PUBLIC "-framework AppKit" "-framework OpenGL")
 

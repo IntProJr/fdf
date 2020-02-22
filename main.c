@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:13:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 15:30:47 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/22 15:49:02 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_fdf			*ft_mymlx_init(t_fdf *fdf)
 			&(fdf->size_line), &(fdf->endian));
 //	if (!(fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse))))
 //		fdf_exit(ERR_FDF_INIT);
-//	fdf->control = control_init(fdf);
+	fdf->control = control_init(fdf);
 	return (fdf);
 }
 
@@ -61,7 +61,7 @@ int				main(int argc, char **argv)
 		fdf_exit(ERR_MAP);
 	if (!(fdf = fdf_init()) || read_map(fd, &c_stack, fdf) == -1)
 		fdf_exit(ERR_MAP_READING);
-	mlx_init(fdf);
+	ft_mymlx_init(fdf);
 	ft_draw(fdf);
 //	ft_setup_key_hook(fdf);
 	mlx_loop(fdf->mlx);

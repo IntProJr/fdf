@@ -25,6 +25,12 @@ CMakeFiles/fdf.dir/give_color.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/give_color.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/give_color.c.o: ../minilibx_macos/mlx.h
 
+CMakeFiles/fdf.dir/init_struct.c.o: ../fdf.h
+CMakeFiles/fdf.dir/init_struct.c.o: ../init_struct.c
+CMakeFiles/fdf.dir/init_struct.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/fdf.dir/init_struct.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/init_struct.c.o: ../minilibx_macos/mlx.h
+
 CMakeFiles/fdf.dir/initialize.c.o: ../fdf.h
 CMakeFiles/fdf.dir/initialize.c.o: ../initialize.c
 CMakeFiles/fdf.dir/initialize.c.o: ../libft/includes/get_next_line.h

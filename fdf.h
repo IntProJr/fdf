@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:01:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/16 12:44:09 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/22 16:04:50 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@
 # define ERR_MAP_READING			"Reading error"
 # define ERR_MEMORY_ALLOCATION		"FdF: failed to allocate memory"
 # define ERROR_OF_FDF_INITIALIZING		"FdF initialization error"
+# define ERR_CONTROL		"Error of control initialization"
 
 # define FT_INT_MAX			((int)2147483647)
 # define FT_INT_MIN			((int)-2147483648)
 # define BACKGROUND			0xFFFFFF
 # define FT_ABS(X) (((X) < 0) ? (-(X)) : (X))
+# define FT_MIN(A, B) (((A) < (B)) ? (A) : (B))
 
 # define COLOR_WATER		0x00F7FF
 # define COLOR_GREEN		0x00FF00
@@ -110,5 +112,8 @@ void						ft_draw(t_fdf *fdf);
 int 						f_color(t_point cur, t_point start, t_point end, t_point d);
 int 						ft_get_default_color(int z, t_fdf *fdf);
 t_point						project(int x, int y, t_fdf *fdf);
+t_control					*control_init(t_fdf *fdf);
+t_control					*control_init(t_fdf *fdf);
+
 
 #endif

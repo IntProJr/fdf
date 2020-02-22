@@ -231,6 +231,33 @@ give_color.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/give_color.c.s
 .PHONY : give_color.c.s
 
+init_struct.o: init_struct.c.o
+
+.PHONY : init_struct.o
+
+# target to build an object file
+init_struct.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.o
+.PHONY : init_struct.c.o
+
+init_struct.i: init_struct.c.i
+
+.PHONY : init_struct.i
+
+# target to preprocess a source file
+init_struct.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.i
+.PHONY : init_struct.c.i
+
+init_struct.s: init_struct.c.s
+
+.PHONY : init_struct.s
+
+# target to generate assembly for a file
+init_struct.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.s
+.PHONY : init_struct.c.s
+
 initialize.o: initialize.c.o
 
 .PHONY : initialize.o
@@ -900,6 +927,9 @@ help:
 	@echo "... give_color.o"
 	@echo "... give_color.i"
 	@echo "... give_color.s"
+	@echo "... init_struct.o"
+	@echo "... init_struct.i"
+	@echo "... init_struct.s"
 	@echo "... initialize.o"
 	@echo "... initialize.i"
 	@echo "... initialize.s"

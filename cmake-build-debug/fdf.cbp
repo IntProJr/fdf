@@ -99,6 +99,9 @@
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/give_color.c">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/init_struct.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/initialize.c">
 			<Option target="fdf"/>
 		</Unit>

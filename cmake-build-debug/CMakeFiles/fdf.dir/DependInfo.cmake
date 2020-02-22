@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/lrosalee/Documents/git/fdf/draw_map.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/draw_map.c.o"
   "/Users/lrosalee/Documents/git/fdf/exit.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/exit.c.o"
   "/Users/lrosalee/Documents/git/fdf/give_color.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/give_color.c.o"
+  "/Users/lrosalee/Documents/git/fdf/init_struct.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/init_struct.c.o"
   "/Users/lrosalee/Documents/git/fdf/initialize.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/initialize.c.o"
   "/Users/lrosalee/Documents/git/fdf/libft/sources/ft_atoi.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/sources/ft_atoi.c.o"
   "/Users/lrosalee/Documents/git/fdf/libft/sources/ft_atoi_base.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/sources/ft_atoi_base.c.o"

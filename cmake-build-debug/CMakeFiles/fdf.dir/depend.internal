@@ -25,6 +25,12 @@ CMakeFiles/fdf.dir/give_color.c.o
  /Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
  /Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
  /Users/lrosalee/Documents/git/fdf/minilibx_macos/mlx.h
+CMakeFiles/fdf.dir/init_struct.c.o
+ /Users/lrosalee/Documents/git/fdf/fdf.h
+ /Users/lrosalee/Documents/git/fdf/init_struct.c
+ /Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
+ /Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
+ /Users/lrosalee/Documents/git/fdf/minilibx_macos/mlx.h
 CMakeFiles/fdf.dir/initialize.c.o
  /Users/lrosalee/Documents/git/fdf/fdf.h
  /Users/lrosalee/Documents/git/fdf/initialize.c
