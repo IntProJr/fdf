@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/lrosalee/Documents/fdf/./minilibx_macos 
+C_INCLUDES = -I/Users/lrosalee/Documents/git/fdf/. -I/Users/lrosalee/Documents/git/fdf/./minilibx_macos 
 

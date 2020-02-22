@@ -23,8 +23,9 @@
 #include <limits.h>
 #include <errno.h>
 
-#define WIDTH		1920
-#define HEIGHT		1080
+# define WIDTH				1920
+# define HEIGHT				1080
+# define RADIAN				0.523599
 
 # define ERR_USAGE					"Usage: ./fdf source_file"
 # define ERR_MAP					"Incorrect MAP_FILE"
@@ -46,6 +47,7 @@
 # define COLOR_JAFFA		0xEF8633
 # define COLOR_ORANGE		0xF3AF3D
 # define COLOR_ACID_GR		0x80FF00
+# define RADIAN				0.523599
 
 typedef struct				s_point
 {
@@ -107,6 +109,6 @@ t_fdf						*ft_mlx_init(t_fdf *fdf);
 void						ft_draw(t_fdf *fdf);
 int 						f_color(t_point cur, t_point start, t_point end, t_point d);
 int 						ft_get_default_color(int z, t_fdf *fdf);
-t_point						project(int x, int y,t_fdf *fdf);
+t_point						project(int x, int y, t_fdf *fdf);
 
 #endif

@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/lrosalee/Documents/fdf/fdf.h
+/Users/lrosalee/Documents/git/fdf/fdf.h
 ./libft/includes/libft.h
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
 ./libft/includes/get_next_line.h
-/Users/lrosalee/Documents/fdf/libft/includes/get_next_line.h
+/Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
 math.h
 -
 minilibx_macos/mlx.h
-/Users/lrosalee/Documents/fdf/minilibx_macos/mlx.h
+/Users/lrosalee/Documents/git/fdf/minilibx_macos/mlx.h
 fcntl.h
 -
 stdlib.h
@@ -26,7 +26,7 @@ limits.h
 errno.h
 -
 
-/Users/lrosalee/Documents/fdf/libft/includes/get_next_line.h
+/Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
 string.h
 -
 stdlib.h
@@ -34,9 +34,9 @@ stdlib.h
 unistd.h
 -
 libft.h
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
 
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
 stdlib.h
 -
 unistd.h
@@ -46,9 +46,9 @@ string.h
 fcntl.h
 -
 
-/Users/lrosalee/Documents/fdf/main.c
+/Users/lrosalee/Documents/git/fdf/main.c
 fdf.h
-/Users/lrosalee/Documents/fdf/fdf.h
+/Users/lrosalee/Documents/git/fdf/fdf.h
 
-/Users/lrosalee/Documents/fdf/minilibx_macos/mlx.h
+/Users/lrosalee/Documents/git/fdf/minilibx_macos/mlx.h
 

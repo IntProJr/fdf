@@ -39,6 +39,9 @@ CMakeFiles/fdf.dir/libft/sources/ft_atoi_base.c.o: ../libft/sources/ft_atoi_base
 CMakeFiles/fdf.dir/libft/sources/ft_bzero.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_bzero.c.o: ../libft/sources/ft_bzero.c
 
+CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.o: ../libft/sources/ft_clear_mass.c
+
 CMakeFiles/fdf.dir/libft/sources/ft_isdigit.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_isdigit.c.o: ../libft/sources/ft_isdigit.c
 
@@ -56,6 +59,9 @@ CMakeFiles/fdf.dir/libft/sources/ft_putstr_fd.c.o: ../libft/sources/ft_putstr_fd
 
 CMakeFiles/fdf.dir/libft/sources/ft_strchr.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_strchr.c.o: ../libft/sources/ft_strchr.c
+
+CMakeFiles/fdf.dir/libft/sources/ft_strdel.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/libft/sources/ft_strdel.c.o: ../libft/sources/ft_strdel.c
 
 CMakeFiles/fdf.dir/libft/sources/ft_strdup.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_strdup.c.o: ../libft/sources/ft_strdup.c
@@ -78,6 +84,9 @@ CMakeFiles/fdf.dir/libft/sources/ft_strsplit.c.o: ../libft/sources/ft_strsplit.c
 CMakeFiles/fdf.dir/libft/sources/ft_strsub.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_strsub.c.o: ../libft/sources/ft_strsub.c
 
+CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.o: ../libft/sources/ft_wordcount.c
+
 CMakeFiles/fdf.dir/libft/sources/get_next_line.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/libft/sources/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/get_next_line.c.o: ../libft/sources/get_next_line.c
@@ -88,6 +97,10 @@ CMakeFiles/fdf.dir/main.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/main.c.o: ../main.c
 CMakeFiles/fdf.dir/main.c.o: ../minilibx_macos/mlx.h
 
+CMakeFiles/fdf.dir/projection.c.o: ../fdf.h
+CMakeFiles/fdf.dir/projection.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/fdf.dir/projection.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/projection.c.o: ../minilibx_macos/mlx.h
 CMakeFiles/fdf.dir/projection.c.o: ../projection.c
 
 CMakeFiles/fdf.dir/read_map.c.o: ../fdf.h

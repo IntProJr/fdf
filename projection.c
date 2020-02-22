@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:22:11 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/16 12:44:09 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/22 15:17:41 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,18 @@ void		ft_rotate_xyz(int *y, int *z, int *x, t_fdf *fdf)
 		*y = prev_y * cos(fdf->control->alf) + *z * sin(fdf->control->alf);
 		*z = -prev_y * sin (fdf->control->alf) + *z * cos(fdf->control->alf);
 	}
+	if (fdf->control->bet)
+	{
+		*x = prev_x * cos(fdf->control->alf) + *z * sin(fdf->control->alf);
+		*z = -prev_x * sin(fdf->control->bet) + *z *cos(fdf->control->bet);
+	}
+	if (fdf->control->gam)
+	{
+		prev_x = *x;
+		prev_y = *y;
+		*x = prev_x * cos(fdf->control->gam) - prev_y * sin(fdf->control->gam);
+		*y = prev_x * sin(fdf->control->gam) + prev_y * cos(fdf->control->gam);
+	}
 }
 
 t_point		new_point(int x, int y, t_fdf *fdf)
@@ -47,6 +59,22 @@ t_point		new_point(int x, int y, t_fdf *fdf)
 }
 
 /*
+** Истинная изометрическая проекция использует угол 30° (0,523599 рад).
+** Изометрическая проекция 2:1 использует угол 26,57° (0,46373398 рад).
+*/
+
+void	ft_iso(int *x, int *y, int z)
+{
+	int prev_x;
+	int prev_y;
+
+	prev_x = *x;
+	prev_y = *y;
+	*x = (prev_x - prev_y) * cos(RADIAN);
+	*y = -z + (prev_x + prev_y) * sin(RADIAN);
+}
+
+/*
 ** производим манипуляции с текущими координатами:
 ** control->zoom: увеличение реального размера фигуры, p.z размер высот/низин
 ** control->zoom / 2: поворот фигуры относительно её середины
@@ -54,7 +82,7 @@ t_point		new_point(int x, int y, t_fdf *fdf)
 ** move: перемещение карты с помощью стрелок
 */
 
-t_point		project(int x, int y,t_fdf *fdf)
+t_point		project(int x, int y, t_fdf *fdf)
 {
 	t_point		p;
 
@@ -64,12 +92,11 @@ t_point		project(int x, int y,t_fdf *fdf)
 	p.z *= fdf->control->zoom / fdf->control->z_altitude;
 	p.x -= (fdf->width * fdf->control->zoom) / 2;
 	p.y -= (fdf->height * fdf->control->zoom) / 2;
-	ft_rotate_xyz(&p.x, &p.y, p.z, fdf);
+	ft_rotate_xyz(&p.x, &p.y, &p.z, fdf);
 	if (fdf->control->projection)
 		ft_iso(&p.x, &p.y, p.z);
 	p.x += WIDTH / 2 + fdf->control->x_move;
 	p.y += (HEIGHT + fdf->height * fdf->control->zoom) / 2
-			+
-			fdf->control->y_move;
+			+ fdf->control->y_move;
 	return (p);
 }

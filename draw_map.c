@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:06:26 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/11 19:58:07 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/22 13:17:45 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,12 +96,11 @@ void		ft_draw(t_fdf *fdf)
 		while (++x < fdf->width)
 		{
 			if (x != fdf->width - 1)
-				draw_line(project(x, y, fdf), project(x + 1, y, fdf, 0));
+				draw_line(project(x, y, fdf), project(x + 1, y, fdf), fdf, 0);
 			if (y != fdf->height - 1)
 				draw_line(project(x, y, fdf), project(x, y + 1, fdf), fdf, 0);
 		}
 	}
-
-
-
+	mlx_put_image_to_window(fdf->mlx, fdf->win, fdf->img, 0, 0);
+	//(fdf->control->menu) ? (print_menu(fdf, 0)) : (fdf->control->menu = 0);
 }

@@ -96,6 +96,7 @@ SOURCES_LIST = 	ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_realloc.c \
+	ft_wordcount.c \
 	get_next_line.c
 # SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
 # OBJ_DIR = objects/

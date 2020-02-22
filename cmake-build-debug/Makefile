@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/lrosalee/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/lrosalee/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lrosalee/Documents/fdf
+CMAKE_SOURCE_DIR = /Users/lrosalee/Documents/git/fdf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lrosalee/Documents/fdf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lrosalee/Documents/git/fdf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/lrosalee/Documents/fdf/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/lrosalee/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/lrosalee/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles /Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -339,6 +339,33 @@ libft/sources/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_bzero.c.s
 .PHONY : libft/sources/ft_bzero.c.s
 
+libft/sources/ft_clear_mass.o: libft/sources/ft_clear_mass.c.o
+
+.PHONY : libft/sources/ft_clear_mass.o
+
+# target to build an object file
+libft/sources/ft_clear_mass.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.o
+.PHONY : libft/sources/ft_clear_mass.c.o
+
+libft/sources/ft_clear_mass.i: libft/sources/ft_clear_mass.c.i
+
+.PHONY : libft/sources/ft_clear_mass.i
+
+# target to preprocess a source file
+libft/sources/ft_clear_mass.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.i
+.PHONY : libft/sources/ft_clear_mass.c.i
+
+libft/sources/ft_clear_mass.s: libft/sources/ft_clear_mass.c.s
+
+.PHONY : libft/sources/ft_clear_mass.s
+
+# target to generate assembly for a file
+libft/sources/ft_clear_mass.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.s
+.PHONY : libft/sources/ft_clear_mass.c.s
+
 libft/sources/ft_isdigit.o: libft/sources/ft_isdigit.c.o
 
 .PHONY : libft/sources/ft_isdigit.o
@@ -500,6 +527,33 @@ libft/sources/ft_strchr.s: libft/sources/ft_strchr.c.s
 libft/sources/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_strchr.c.s
 .PHONY : libft/sources/ft_strchr.c.s
+
+libft/sources/ft_strdel.o: libft/sources/ft_strdel.c.o
+
+.PHONY : libft/sources/ft_strdel.o
+
+# target to build an object file
+libft/sources/ft_strdel.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_strdel.c.o
+.PHONY : libft/sources/ft_strdel.c.o
+
+libft/sources/ft_strdel.i: libft/sources/ft_strdel.c.i
+
+.PHONY : libft/sources/ft_strdel.i
+
+# target to preprocess a source file
+libft/sources/ft_strdel.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_strdel.c.i
+.PHONY : libft/sources/ft_strdel.c.i
+
+libft/sources/ft_strdel.s: libft/sources/ft_strdel.c.s
+
+.PHONY : libft/sources/ft_strdel.s
+
+# target to generate assembly for a file
+libft/sources/ft_strdel.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_strdel.c.s
+.PHONY : libft/sources/ft_strdel.c.s
 
 libft/sources/ft_strdup.o: libft/sources/ft_strdup.c.o
 
@@ -690,6 +744,33 @@ libft/sources/ft_strsub.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_strsub.c.s
 .PHONY : libft/sources/ft_strsub.c.s
 
+libft/sources/ft_wordcount.o: libft/sources/ft_wordcount.c.o
+
+.PHONY : libft/sources/ft_wordcount.o
+
+# target to build an object file
+libft/sources/ft_wordcount.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.o
+.PHONY : libft/sources/ft_wordcount.c.o
+
+libft/sources/ft_wordcount.i: libft/sources/ft_wordcount.c.i
+
+.PHONY : libft/sources/ft_wordcount.i
+
+# target to preprocess a source file
+libft/sources/ft_wordcount.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.i
+.PHONY : libft/sources/ft_wordcount.c.i
+
+libft/sources/ft_wordcount.s: libft/sources/ft_wordcount.c.s
+
+.PHONY : libft/sources/ft_wordcount.s
+
+# target to generate assembly for a file
+libft/sources/ft_wordcount.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.s
+.PHONY : libft/sources/ft_wordcount.c.s
+
 libft/sources/get_next_line.o: libft/sources/get_next_line.c.o
 
 .PHONY : libft/sources/get_next_line.o
@@ -831,6 +912,9 @@ help:
 	@echo "... libft/sources/ft_bzero.o"
 	@echo "... libft/sources/ft_bzero.i"
 	@echo "... libft/sources/ft_bzero.s"
+	@echo "... libft/sources/ft_clear_mass.o"
+	@echo "... libft/sources/ft_clear_mass.i"
+	@echo "... libft/sources/ft_clear_mass.s"
 	@echo "... libft/sources/ft_isdigit.o"
 	@echo "... libft/sources/ft_isdigit.i"
 	@echo "... libft/sources/ft_isdigit.s"
@@ -849,6 +933,9 @@ help:
 	@echo "... libft/sources/ft_strchr.o"
 	@echo "... libft/sources/ft_strchr.i"
 	@echo "... libft/sources/ft_strchr.s"
+	@echo "... libft/sources/ft_strdel.o"
+	@echo "... libft/sources/ft_strdel.i"
+	@echo "... libft/sources/ft_strdel.s"
 	@echo "... libft/sources/ft_strdup.o"
 	@echo "... libft/sources/ft_strdup.i"
 	@echo "... libft/sources/ft_strdup.s"
@@ -870,6 +957,9 @@ help:
 	@echo "... libft/sources/ft_strsub.o"
 	@echo "... libft/sources/ft_strsub.i"
 	@echo "... libft/sources/ft_strsub.s"
+	@echo "... libft/sources/ft_wordcount.o"
+	@echo "... libft/sources/ft_wordcount.i"
+	@echo "... libft/sources/ft_wordcount.s"
 	@echo "... libft/sources/get_next_line.o"
 	@echo "... libft/sources/get_next_line.i"
 	@echo "... libft/sources/get_next_line.s"
