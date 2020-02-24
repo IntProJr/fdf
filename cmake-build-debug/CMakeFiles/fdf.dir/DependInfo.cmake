@@ -7,9 +7,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/lrosalee/Documents/git/fdf/check_color.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/check_color.c.o"
   "/Users/lrosalee/Documents/git/fdf/draw_map.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/draw_map.c.o"
   "/Users/lrosalee/Documents/git/fdf/exit.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/exit.c.o"
+  "/Users/lrosalee/Documents/git/fdf/ft_mouse.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/ft_mouse.c.o"
   "/Users/lrosalee/Documents/git/fdf/give_color.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/give_color.c.o"
-  "/Users/lrosalee/Documents/git/fdf/init_struct.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/init_struct.c.o"
   "/Users/lrosalee/Documents/git/fdf/initialize.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/initialize.c.o"
+  "/Users/lrosalee/Documents/git/fdf/key_hook.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/key_hook.c.o"
   "/Users/lrosalee/Documents/git/fdf/libft/sources/ft_atoi.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/sources/ft_atoi.c.o"
   "/Users/lrosalee/Documents/git/fdf/libft/sources/ft_atoi_base.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/sources/ft_atoi_base.c.o"
   "/Users/lrosalee/Documents/git/fdf/libft/sources/ft_bzero.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/sources/ft_bzero.c.o"
@@ -33,6 +34,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/lrosalee/Documents/git/fdf/main.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/main.c.o"
   "/Users/lrosalee/Documents/git/fdf/projection.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/projection.c.o"
   "/Users/lrosalee/Documents/git/fdf/read_map.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/read_map.c.o"
+  "/Users/lrosalee/Documents/git/fdf/utilits.c" "/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles/fdf.dir/utilits.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

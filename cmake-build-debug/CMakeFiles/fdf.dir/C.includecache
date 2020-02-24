@@ -6,25 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/lrosalee/Documents/git/fdf/check_color.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
-/Users/lrosalee/Documents/git/fdf/draw_map.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
-/Users/lrosalee/Documents/git/fdf/exit.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-stdio.h
--
-
 /Users/lrosalee/Documents/git/fdf/fdf.h
 ./libft/includes/libft.h
 /Users/lrosalee/Documents/git/fdf/libft/includes/libft.h
 ./libft/includes/get_next_line.h
 /Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
+for_utilits.h
+/Users/lrosalee/Documents/git/fdf/for_utilits.h
 math.h
 -
 minilibx_macos/mlx.h
@@ -40,17 +28,7 @@ limits.h
 errno.h
 -
 
-/Users/lrosalee/Documents/git/fdf/give_color.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
-/Users/lrosalee/Documents/git/fdf/init_struct.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
-/Users/lrosalee/Documents/git/fdf/initialize.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
+/Users/lrosalee/Documents/git/fdf/for_utilits.h
 
 /Users/lrosalee/Documents/git/fdf/libft/includes/get_next_line.h
 string.h
@@ -72,17 +50,9 @@ string.h
 fcntl.h
 -
 
-/Users/lrosalee/Documents/git/fdf/main.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
 /Users/lrosalee/Documents/git/fdf/minilibx_macos/mlx.h
 
-/Users/lrosalee/Documents/git/fdf/projection.c
-fdf.h
-/Users/lrosalee/Documents/git/fdf/fdf.h
-
-/Users/lrosalee/Documents/git/fdf/read_map.c
+/Users/lrosalee/Documents/git/fdf/utilits.c
 fdf.h
 /Users/lrosalee/Documents/git/fdf/fdf.h
 

@@ -3,39 +3,52 @@
 
 CMakeFiles/fdf.dir/check_color.c.o: ../check_color.c
 CMakeFiles/fdf.dir/check_color.c.o: ../fdf.h
+CMakeFiles/fdf.dir/check_color.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/check_color.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/check_color.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/check_color.c.o: ../minilibx_macos/mlx.h
 
 CMakeFiles/fdf.dir/draw_map.c.o: ../draw_map.c
 CMakeFiles/fdf.dir/draw_map.c.o: ../fdf.h
+CMakeFiles/fdf.dir/draw_map.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/draw_map.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/draw_map.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/draw_map.c.o: ../minilibx_macos/mlx.h
 
 CMakeFiles/fdf.dir/exit.c.o: ../exit.c
 CMakeFiles/fdf.dir/exit.c.o: ../fdf.h
+CMakeFiles/fdf.dir/exit.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/exit.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/exit.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/exit.c.o: ../minilibx_macos/mlx.h
 
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../fdf.h
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../for_utilits.h
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../ft_mouse.c
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../minilibx_macos/mlx.h
+
 CMakeFiles/fdf.dir/give_color.c.o: ../fdf.h
+CMakeFiles/fdf.dir/give_color.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/give_color.c.o: ../give_color.c
 CMakeFiles/fdf.dir/give_color.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/give_color.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/give_color.c.o: ../minilibx_macos/mlx.h
 
-CMakeFiles/fdf.dir/init_struct.c.o: ../fdf.h
-CMakeFiles/fdf.dir/init_struct.c.o: ../init_struct.c
-CMakeFiles/fdf.dir/init_struct.c.o: ../libft/includes/get_next_line.h
-CMakeFiles/fdf.dir/init_struct.c.o: ../libft/includes/libft.h
-CMakeFiles/fdf.dir/init_struct.c.o: ../minilibx_macos/mlx.h
-
 CMakeFiles/fdf.dir/initialize.c.o: ../fdf.h
+CMakeFiles/fdf.dir/initialize.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/initialize.c.o: ../initialize.c
 CMakeFiles/fdf.dir/initialize.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/initialize.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/initialize.c.o: ../minilibx_macos/mlx.h
+
+CMakeFiles/fdf.dir/key_hook.c.o: ../fdf.h
+CMakeFiles/fdf.dir/key_hook.c.o: ../for_utilits.h
+CMakeFiles/fdf.dir/key_hook.c.o: ../key_hook.c
+CMakeFiles/fdf.dir/key_hook.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/fdf.dir/key_hook.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/key_hook.c.o: ../minilibx_macos/mlx.h
 
 CMakeFiles/fdf.dir/libft/sources/ft_atoi.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/ft_atoi.c.o: ../libft/sources/ft_atoi.c
@@ -98,20 +111,30 @@ CMakeFiles/fdf.dir/libft/sources/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/sources/get_next_line.c.o: ../libft/sources/get_next_line.c
 
 CMakeFiles/fdf.dir/main.c.o: ../fdf.h
+CMakeFiles/fdf.dir/main.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/main.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/main.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/main.c.o: ../main.c
 CMakeFiles/fdf.dir/main.c.o: ../minilibx_macos/mlx.h
 
 CMakeFiles/fdf.dir/projection.c.o: ../fdf.h
+CMakeFiles/fdf.dir/projection.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/projection.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/projection.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/projection.c.o: ../minilibx_macos/mlx.h
 CMakeFiles/fdf.dir/projection.c.o: ../projection.c
 
 CMakeFiles/fdf.dir/read_map.c.o: ../fdf.h
+CMakeFiles/fdf.dir/read_map.c.o: ../for_utilits.h
 CMakeFiles/fdf.dir/read_map.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/fdf.dir/read_map.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/read_map.c.o: ../minilibx_macos/mlx.h
 CMakeFiles/fdf.dir/read_map.c.o: ../read_map.c
+
+CMakeFiles/fdf.dir/utilits.c.o: ../fdf.h
+CMakeFiles/fdf.dir/utilits.c.o: ../for_utilits.h
+CMakeFiles/fdf.dir/utilits.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/fdf.dir/utilits.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/utilits.c.o: ../minilibx_macos/mlx.h
+CMakeFiles/fdf.dir/utilits.c.o: ../utilits.c
 

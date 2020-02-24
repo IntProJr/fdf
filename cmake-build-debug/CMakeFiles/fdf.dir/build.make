@@ -421,18 +421,44 @@ CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lrosalee/Documents/git/fdf/libft/sources/ft_clear_mass.c -o CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.s
 
-CMakeFiles/fdf.dir/init_struct.c.o: CMakeFiles/fdf.dir/flags.make
-CMakeFiles/fdf.dir/init_struct.c.o: ../init_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/fdf.dir/init_struct.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/init_struct.c.o   -c /Users/lrosalee/Documents/git/fdf/init_struct.c
+CMakeFiles/fdf.dir/utilits.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/utilits.c.o: ../utilits.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/fdf.dir/utilits.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/utilits.c.o   -c /Users/lrosalee/Documents/git/fdf/utilits.c
 
-CMakeFiles/fdf.dir/init_struct.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/init_struct.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lrosalee/Documents/git/fdf/init_struct.c > CMakeFiles/fdf.dir/init_struct.c.i
+CMakeFiles/fdf.dir/utilits.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/utilits.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lrosalee/Documents/git/fdf/utilits.c > CMakeFiles/fdf.dir/utilits.c.i
 
-CMakeFiles/fdf.dir/init_struct.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/init_struct.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lrosalee/Documents/git/fdf/init_struct.c -o CMakeFiles/fdf.dir/init_struct.c.s
+CMakeFiles/fdf.dir/utilits.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/utilits.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lrosalee/Documents/git/fdf/utilits.c -o CMakeFiles/fdf.dir/utilits.c.s
+
+CMakeFiles/fdf.dir/key_hook.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/key_hook.c.o: ../key_hook.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/fdf.dir/key_hook.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/key_hook.c.o   -c /Users/lrosalee/Documents/git/fdf/key_hook.c
+
+CMakeFiles/fdf.dir/key_hook.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/key_hook.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lrosalee/Documents/git/fdf/key_hook.c > CMakeFiles/fdf.dir/key_hook.c.i
+
+CMakeFiles/fdf.dir/key_hook.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/key_hook.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lrosalee/Documents/git/fdf/key_hook.c -o CMakeFiles/fdf.dir/key_hook.c.s
+
+CMakeFiles/fdf.dir/ft_mouse.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/ft_mouse.c.o: ../ft_mouse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/fdf.dir/ft_mouse.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/ft_mouse.c.o   -c /Users/lrosalee/Documents/git/fdf/ft_mouse.c
+
+CMakeFiles/fdf.dir/ft_mouse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/ft_mouse.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lrosalee/Documents/git/fdf/ft_mouse.c > CMakeFiles/fdf.dir/ft_mouse.c.i
+
+CMakeFiles/fdf.dir/ft_mouse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/ft_mouse.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lrosalee/Documents/git/fdf/ft_mouse.c -o CMakeFiles/fdf.dir/ft_mouse.c.s
 
 # Object files for target fdf
 fdf_OBJECTS = \
@@ -464,7 +490,9 @@ fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/give_color.c.o" \
 "CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.o" \
 "CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.o" \
-"CMakeFiles/fdf.dir/init_struct.c.o"
+"CMakeFiles/fdf.dir/utilits.c.o" \
+"CMakeFiles/fdf.dir/key_hook.c.o" \
+"CMakeFiles/fdf.dir/ft_mouse.c.o"
 
 # External object files for target fdf
 fdf_EXTERNAL_OBJECTS =
@@ -497,11 +525,13 @@ fdf: CMakeFiles/fdf.dir/projection.c.o
 fdf: CMakeFiles/fdf.dir/give_color.c.o
 fdf: CMakeFiles/fdf.dir/libft/sources/ft_wordcount.c.o
 fdf: CMakeFiles/fdf.dir/libft/sources/ft_clear_mass.c.o
-fdf: CMakeFiles/fdf.dir/init_struct.c.o
+fdf: CMakeFiles/fdf.dir/utilits.c.o
+fdf: CMakeFiles/fdf.dir/key_hook.c.o
+fdf: CMakeFiles/fdf.dir/ft_mouse.c.o
 fdf: CMakeFiles/fdf.dir/build.make
 fdf: /usr/local/lib/libmlx.a
 fdf: CMakeFiles/fdf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C executable fdf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lrosalee/Documents/git/fdf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking C executable fdf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

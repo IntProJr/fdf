@@ -96,13 +96,19 @@
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/fdf.h">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/for_utilits.h">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/ft_mouse.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/give_color.c">
 			<Option target="fdf"/>
 		</Unit>
-		<Unit filename="/Users/lrosalee/Documents/git/fdf/init_struct.c">
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/initialize.c">
 			<Option target="fdf"/>
 		</Unit>
-		<Unit filename="/Users/lrosalee/Documents/git/fdf/initialize.c">
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/key_hook.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/libft/sources/ft_atoi.c">
@@ -172,6 +178,9 @@
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/read_map.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Documents/git/fdf/utilits.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/lrosalee/Documents/git/fdf/CMakeLists.txt">

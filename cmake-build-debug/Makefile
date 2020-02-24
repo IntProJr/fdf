@@ -204,6 +204,33 @@ exit.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/exit.c.s
 .PHONY : exit.c.s
 
+ft_mouse.o: ft_mouse.c.o
+
+.PHONY : ft_mouse.o
+
+# target to build an object file
+ft_mouse.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/ft_mouse.c.o
+.PHONY : ft_mouse.c.o
+
+ft_mouse.i: ft_mouse.c.i
+
+.PHONY : ft_mouse.i
+
+# target to preprocess a source file
+ft_mouse.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/ft_mouse.c.i
+.PHONY : ft_mouse.c.i
+
+ft_mouse.s: ft_mouse.c.s
+
+.PHONY : ft_mouse.s
+
+# target to generate assembly for a file
+ft_mouse.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/ft_mouse.c.s
+.PHONY : ft_mouse.c.s
+
 give_color.o: give_color.c.o
 
 .PHONY : give_color.o
@@ -231,33 +258,6 @@ give_color.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/give_color.c.s
 .PHONY : give_color.c.s
 
-init_struct.o: init_struct.c.o
-
-.PHONY : init_struct.o
-
-# target to build an object file
-init_struct.c.o:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.o
-.PHONY : init_struct.c.o
-
-init_struct.i: init_struct.c.i
-
-.PHONY : init_struct.i
-
-# target to preprocess a source file
-init_struct.c.i:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.i
-.PHONY : init_struct.c.i
-
-init_struct.s: init_struct.c.s
-
-.PHONY : init_struct.s
-
-# target to generate assembly for a file
-init_struct.c.s:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_struct.c.s
-.PHONY : init_struct.c.s
-
 initialize.o: initialize.c.o
 
 .PHONY : initialize.o
@@ -284,6 +284,33 @@ initialize.s: initialize.c.s
 initialize.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/initialize.c.s
 .PHONY : initialize.c.s
+
+key_hook.o: key_hook.c.o
+
+.PHONY : key_hook.o
+
+# target to build an object file
+key_hook.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/key_hook.c.o
+.PHONY : key_hook.c.o
+
+key_hook.i: key_hook.c.i
+
+.PHONY : key_hook.i
+
+# target to preprocess a source file
+key_hook.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/key_hook.c.i
+.PHONY : key_hook.c.i
+
+key_hook.s: key_hook.c.s
+
+.PHONY : key_hook.s
+
+# target to generate assembly for a file
+key_hook.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/key_hook.c.s
+.PHONY : key_hook.c.s
 
 libft/sources/ft_atoi.o: libft/sources/ft_atoi.c.o
 
@@ -906,6 +933,33 @@ read_map.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/read_map.c.s
 .PHONY : read_map.c.s
 
+utilits.o: utilits.c.o
+
+.PHONY : utilits.o
+
+# target to build an object file
+utilits.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utilits.c.o
+.PHONY : utilits.c.o
+
+utilits.i: utilits.c.i
+
+.PHONY : utilits.i
+
+# target to preprocess a source file
+utilits.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utilits.c.i
+.PHONY : utilits.c.i
+
+utilits.s: utilits.c.s
+
+.PHONY : utilits.s
+
+# target to generate assembly for a file
+utilits.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/utilits.c.s
+.PHONY : utilits.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -924,15 +978,18 @@ help:
 	@echo "... exit.o"
 	@echo "... exit.i"
 	@echo "... exit.s"
+	@echo "... ft_mouse.o"
+	@echo "... ft_mouse.i"
+	@echo "... ft_mouse.s"
 	@echo "... give_color.o"
 	@echo "... give_color.i"
 	@echo "... give_color.s"
-	@echo "... init_struct.o"
-	@echo "... init_struct.i"
-	@echo "... init_struct.s"
 	@echo "... initialize.o"
 	@echo "... initialize.i"
 	@echo "... initialize.s"
+	@echo "... key_hook.o"
+	@echo "... key_hook.i"
+	@echo "... key_hook.s"
 	@echo "... libft/sources/ft_atoi.o"
 	@echo "... libft/sources/ft_atoi.i"
 	@echo "... libft/sources/ft_atoi.s"
@@ -1002,6 +1059,9 @@ help:
 	@echo "... read_map.o"
 	@echo "... read_map.i"
 	@echo "... read_map.s"
+	@echo "... utilits.o"
+	@echo "... utilits.i"
+	@echo "... utilits.s"
 .PHONY : help
 
 

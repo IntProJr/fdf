@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:13:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 15:49:02 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/24 15:00:15 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,25 @@ t_fdf			*ft_mymlx_init(t_fdf *fdf)
 		fdf_exit(ERROR_OF_FDF_INITIALIZING);
 	fdf->data_addr = mlx_get_data_addr(fdf->img, &(fdf->bits_per_pixel),
 			&(fdf->size_line), &(fdf->endian));
-//	if (!(fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse))))
-//		fdf_exit(ERR_FDF_INIT);
+	if (!(fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse))))
+		fdf_exit(ERR_FDF_INIT);
 	fdf->control = control_init(fdf);
 	return (fdf);
+}
+
+/*
+** mlx_loop программа получает «события» от клавиатуры или мыши. Эта функция
+** никогда не возвращается. Это бесконечный цикл, который ожидает события,
+** а затем вызывает пользовательскую функцию, связанную с этим событием.
+** Необходим один параметр - идентификатор соединения mlx_ptr
+*/
+
+void			ft_setup_key_hook(t_fdf *fdf)
+{
+	mlx_hook(fdf->win, 2, 0, key_press, fdf);
+	mlx_hook(fdf->win, 2, 0, ft_mouse_press, fdf);
+//	mlx_hook(fdf->win, 5, 0, ft_mouse_not_press, fdf);
+//	mlx_hook(fdf->win, 2, 0, ft_mouse_move, fdf);
 }
 
 
@@ -63,7 +78,7 @@ int				main(int argc, char **argv)
 		fdf_exit(ERR_MAP_READING);
 	ft_mymlx_init(fdf);
 	ft_draw(fdf);
-//	ft_setup_key_hook(fdf);
+	ft_setup_key_hook(fdf);
 	mlx_loop(fdf->mlx);
 	return (0);
 }

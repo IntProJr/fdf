@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:01:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 16:04:50 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/24 15:39:14 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "./libft/includes/libft.h"
 #include "./libft/includes/get_next_line.h"
+#include "for_utilits.h"
 #include <math.h>
 #include "minilibx_macos/mlx.h"
 #include <fcntl.h>
@@ -33,10 +34,12 @@
 # define ERR_MEMORY_ALLOCATION		"FdF: failed to allocate memory"
 # define ERROR_OF_FDF_INITIALIZING		"FdF initialization error"
 # define ERR_CONTROL		"Error of control initialization"
+# define ERR_FDF_INIT		"FdF error of initializing"
 
 # define FT_INT_MAX			((int)2147483647)
 # define FT_INT_MIN			((int)-2147483648)
 # define BACKGROUND			0xFFFFFF
+# define TEXT_COLOR			0x0078C2
 # define FT_ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define FT_MIN(A, B) (((A) < (B)) ? (A) : (B))
 
@@ -80,6 +83,15 @@ typedef struct				s_control
 	int 					menu;
 }							t_control;
 
+typedef struct				s_mouse
+{
+	char 					is_pressed;
+	int 					x;
+	int 					y;
+	int						previous_x;
+	int 					previous_y;
+}							t_mouse;
+
 typedef struct				s_fdf
 {
 	void					*mlx;
@@ -97,7 +109,7 @@ typedef struct				s_fdf
 	int 					z_max;
 	size_t 					size;
 	t_control				*control;
-	//t_mouse					*mouse;
+	t_mouse					*mouse;
 }							t_fdf;
 
 
@@ -114,6 +126,8 @@ int 						ft_get_default_color(int z, t_fdf *fdf);
 t_point						project(int x, int y, t_fdf *fdf);
 t_control					*control_init(t_fdf *fdf);
 t_control					*control_init(t_fdf *fdf);
-
+int							key_press(int key, void *param);
+void						zoom(int key, t_fdf *fdf);
+int							ft_mouse_press(int button, int x, int y, void *param);
 
 #endif

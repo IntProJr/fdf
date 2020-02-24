@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 21:06:26 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 15:07:12 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/22 15:12:39 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ void		stack_to_arrays(t_coord **coords_stack, t_fdf *fdf)
 		free(coord);
 	}
 }
-
 
 
 /*

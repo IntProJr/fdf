@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:06:26 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 13:17:45 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/24 15:05:13 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void		ft_draw(t_fdf *fdf)
 	int 	*image;
 	int 	i;
 
-	ft_bzero(fdf->data_addr, WIDTH * HEIGHT * (fdf->bits_per_pixel /8));
+	ft_bzero(fdf->data_addr, WIDTH * HEIGHT * (fdf->bits_per_pixel / 8));
 	image = (int *)(fdf->data_addr);
 	i = -1;
 	while (++i < HEIGHT * WIDTH)
@@ -102,5 +102,5 @@ void		ft_draw(t_fdf *fdf)
 		}
 	}
 	mlx_put_image_to_window(fdf->mlx, fdf->win, fdf->img, 0, 0);
-	//(fdf->control->menu) ? (print_menu(fdf, 0)) : (fdf->control->menu = 0);
+	(fdf->control->menu) ? (print_menu(fdf, 0)) : (fdf->control->menu = 0);
 }
