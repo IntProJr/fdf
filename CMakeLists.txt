@@ -5,43 +5,47 @@ set(CMAKE_C_STANDARD 99)
 
 include_directories(.)
 
-include_directories(./minilibx_macos)
+include_directories(./minilibx_mms)
 
-find_library(MLX mlx ./includes/minilibx_macos)
+find_library(MLX mlx ./includes/minilibx_mms)
 
-link_directories(./minilibx_macos)
+link_directories(./minilibx_mms)
 
 add_executable(fdf
-		main.c
-		fdf.h
-		exit.c
-		initialize.c
-		read_map.c
-		check_color.c
-		./libft/sources/ft_atoi.c
-		./libft/sources/ft_atoi_base.c
-		./libft/sources/ft_isdigit.c
-		./libft/sources/ft_memalloc.c
-		./libft/sources/ft_putendl_fd.c
-		./libft/sources/ft_strsplit.c
-		./libft/sources/get_next_line.c
-		./libft/sources/ft_bzero.c
-		./libft/sources/ft_putchar_fd.c
-		./libft/sources/ft_putstr_fd.c
-		./libft/sources/ft_strchr.c
-		./libft/sources/ft_strdup.c
-		./libft/sources/ft_strjoin.c
-		./libft/sources/ft_strdup.c
-		./libft/sources/ft_strndup.c
-		./libft/sources/ft_strnew.c
-		./libft/sources/ft_strsub.c
-		./libft/sources/ft_strlen.c
-		./libft/sources/ft_strdel.c
-		draw_map.c
-		projection.c
-		give_color.c
-		libft/sources/ft_wordcount.c
-		libft/sources/ft_clear_mass.c utilits.c for_utilits.h key_hook.c ft_mouse.c)
+		src/main.c
+		includes/fdf.h
+		src/exit.c
+		src/initialize.c
+		src/read_map.c
+		src/check_color.c
+		libft/src/ft_atoi.c
+		libft/src/ft_atoi_base.c
+		libft/src/ft_isdigit.c
+		libft/src/ft_memalloc.c
+		libft/src/ft_putendl_fd.c
+		libft/src/ft_strsplit.c
+		libft/src/get_next_line.c
+		libft/src/ft_bzero.c
+		libft/src/ft_putchar_fd.c
+		libft/src/ft_putstr_fd.c
+		libft/src/ft_strchr.c
+		libft/src/ft_strdup.c
+		libft/src/ft_strjoin.c
+		libft/src/ft_strdup.c
+		libft/src/ft_strndup.c
+		libft/src/ft_strnew.c
+		libft/src/ft_strsub.c
+		libft/src/ft_strlen.c
+		libft/src/ft_strdel.c
+		src/draw_map.c
+		src/projection.c
+		src/give_color.c
+		libft/src/ft_wordcount.c
+		libft/src/ft_clear_mass.c
+		src/utilits.c
+		includes/for_utilits.h
+		src/key_hook.c
+		src/ft_mouse.c)
 
 target_link_libraries(fdf PUBLIC "-framework AppKit" "-framework OpenGL")
 

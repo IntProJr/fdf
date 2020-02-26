@@ -10,34 +10,51 @@
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: clean fclean re
+
 NAME = fdf
 
-LIBFT = ./libft/libft.a
+CC = gcc
 
-LIBDIR = ./libft
+CFLAGS = -g
+FRAMEWORKS = -framework OpenGL -framework Appkit
 
-SRC = main.c fdf.h
+MY_LIB = ./libft/
+MLX_LIB = ./mlx/
+INC = ./mlx/ ./libft/includes/ ./includes
+INCLUDES = -I ./mlx/ -I ./libft/includes/ -I ./includes/
 
-OBJ = $(SRC:.c=.o)
+SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
+OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_NAME))
 
-FLAG = -Wall -Wextra -Werror
+SRC_DIR = ./src
+OBJ_DIR = ./object
 
-INCLUDE = -I ./
+SRC_NAME = main.c read_map.c draw_map.c initialize.c give_color.c check_color.c exit.c ft_mouse.c key_hook.c projection.c utilits.c
+OBJ_NAME = $(SRC_NAME:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -sC $(LIBDIR)
-	@gcc $(FLAG) $(OBJ) $(INCLUDE) $(LIBFT) -o $(NAME)
+	@make build_lib
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L $(MLX_LIB) -lmlx -L $(MY_LIB) -lft $(INCLUDES) $(FRAMEWORKS)
 
-%.o:%.c
-	@gcc $(FLAG) $(INCLUDE) -c $< -o $@
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC)
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
+
+build_lib:
+	@make -sC $(MY_LIB)
+	@make -sC $(MLX_LIB)
 
 clean:
-	@make -sC $(LIBDIR) clean
+	@/bin/rm -rf $(OBJ_DIR)
+	@make clean -C $(MLX_LIB)
+	@make clean -C $(MY_LIB)
 
-fclean: clean
-	@make -sC $(LIBDIR) fclean
-	@rm -rf $(NAME)
+fclean:	clean
+	@make clean
+	@/bin/rm -f $(NAME)
+	@make fclean -C $(MY_LIB)
 
-re: fclean all
+re:	fclean all
