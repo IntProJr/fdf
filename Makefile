@@ -6,7 +6,7 @@
 #    By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/22 14:48:08 by lrosalee          #+#    #+#              #
-#    Updated: 2019/11/22 14:48:18 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/02/28 16:45:24 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_NAME))
 SRC_DIR = ./src
 OBJ_DIR = ./object
 
-SRC_NAME = main.c read_map.c draw_map.c initialize.c give_color.c check_color.c exit.c ft_mouse.c key_hook.c projection.c utilits.c
+SRC_NAME = main.c read_map.c draw_map.c initialize.c give_color.c ft_mouse.c key_hook.c projection.c utilits.c
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 all: $(NAME)

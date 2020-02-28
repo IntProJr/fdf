@@ -6,7 +6,7 @@
 #    By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/11 19:57:51 by lrosalee          #+#    #+#              #
-#    Updated: 2020/02/10 20:04:42 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,6 +85,7 @@ SRC = ft_atoi.c \
       	ft_lstmap.c \
       	ft_realloc.c \
       	ft_wordcount.c \
+      	ft_clear_mass.c \
       	get_next_line.c
 
 FLAGS = -Wall -Wextra -Werror

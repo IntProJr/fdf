@@ -6,18 +6,19 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 20:55:04 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 16:44:40 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+
 /*
 ** width: ширина, height: высота.
 ** Массивы (int) coord/colors для хранения координат z и цвета точек.
 ** Максимальный и минимальный размер для высоты/глубины при отрисовке z.
 */
 
-t_fdf		*fdf_init(void)
+t_fdf			*fdf_init(void)
 {
 	t_fdf		*fdf;
 
@@ -27,8 +28,8 @@ t_fdf		*fdf_init(void)
 	fdf->height = 0;
 	fdf->coords = NULL;
 	fdf->colors = NULL;
-	fdf->z_min = FT_INT_MIN;
-	fdf->z_max = FT_INT_MAX;
+	fdf->z_min = FT_INT_MAX;
+	fdf->z_max = FT_INT_MIN;
 	return (fdf);
 }
 

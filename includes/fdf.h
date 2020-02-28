@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:01:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/24 15:39:14 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:18:56 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ typedef struct				s_fdf
 void						fdf_exit(char *s);
 t_fdf						*fdf_init(void);
 int							read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
+t_point						new_point(int x, int y, t_fdf *fdf);
 void						put_new_coords(t_coord **coords_stack, t_coord *new);
 int							ft_check_color(const char *str, int ptr, int i);
 t_fdf						*ft_mlx_init(t_fdf *fdf);
@@ -128,9 +129,14 @@ t_control					*control_init(t_fdf *fdf);
 t_control					*control_init(t_fdf *fdf);
 int							key_press(int key, void *param);
 int							ft_mouse_press(int button, int x, int y, void *param);
-void		zoom(int key, t_fdf *fdf);
-void		move_or_color(int key, t_fdf *fdf);
-void	change_rotation(int key, t_fdf *fdf);
-void	change_pike(int key, t_fdf *fdf);
-void	change_projectiom(int key, t_fdf *fdf);
+void						zoom(int key, t_fdf *fdf);
+void						move_or_color(int key, t_fdf *fdf);
+void						change_rotation(int key, t_fdf *fdf);
+void						change_pike(int key, t_fdf *fdf);
+void						change_projectiom(int key, t_fdf *fdf);
+void						print_menu(t_fdf *fdf, int y);
+int							ft_mouse_not_press(int button, int x, int y, void *param);
+int							ft_mouse_move(int x, int y, void *param);
+void						change_projection(int key, t_fdf *fdf);
+
 #endif

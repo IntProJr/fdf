@@ -14,10 +14,8 @@ link_directories(./minilibx_mms)
 add_executable(fdf
 		src/main.c
 		includes/fdf.h
-		src/exit.c
 		src/initialize.c
 		src/read_map.c
-		src/check_color.c
 		libft/src/ft_atoi.c
 		libft/src/ft_atoi_base.c
 		libft/src/ft_isdigit.c

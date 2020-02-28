@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 18:13:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 17:49:01 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:16:18 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 double		ft_get_percent(int start, int end, int current)
 {
-	if (((double)current == (double)start) || (double)start == (double)end)
+	if (((double)current == (double)start) || ((double)start == (double)end))
 		return (0.0);
 	if ((double)current == (double)end)
 		return (1.0);
@@ -46,20 +46,6 @@ int			ft_get_default_color(int z, t_fdf *fdf)
 		return ((fdf->control->color) ? COLOR_SKY : COLOR_JAFFA);
 	else
 		return ((fdf->control->color) ? COLOR_WATER : COLOR_ORANGE);
-}
-
-/*
-** Находим текущую позицию точки между двумя точками с известными цветами.
-** Значение позиции должно быть выражено в процентах.
-*/
-
-double		get_percent(int start, int end, int current)
-{
-	if (((double)current == (double)start) || ((double)start == (double)end))
-		return (0.0);
-	if ((double)current == (double)end)
-		return (1.0);
-	return (((double)current - (double)start) / ((double)end - (double)start));
 }
 
 /*
@@ -100,10 +86,10 @@ int			f_color(t_point cur, t_point start, t_point end, t_point d)
 	else
 		percent = ft_get_percent(start.y, end.y, cur.y);
 	red = ft_line_interpol((start.color >> 16) & 0xFF,
-			(end.color >> 16) & 0xFF, percent);
+						   (end.color >> 16) & 0xFF, percent);
 	green = ft_line_interpol((start.color >> 8) & 0xFF,
-			(end.color >> 8) & 0xFF, percent);
+							 (end.color >> 8) & 0xFF, percent);
 	blue = ft_line_interpol(start.color & 0xFF,
-			end.color & 0xFF, percent);
+							end.color & 0xFF, percent);
 	return ((red << 16) | (green << 8) | blue);
 }

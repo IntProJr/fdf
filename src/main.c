@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:13:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/24 15:00:15 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void			ft_setup_key_hook(t_fdf *fdf)
 {
 	mlx_hook(fdf->win, 2, 0, key_press, fdf);
 	mlx_hook(fdf->win, 2, 0, ft_mouse_press, fdf);
-//	mlx_hook(fdf->win, 5, 0, ft_mouse_not_press, fdf);
-//	mlx_hook(fdf->win, 2, 0, ft_mouse_move, fdf);
+	mlx_hook(fdf->win, 5, 0, ft_mouse_not_press, fdf);
+	mlx_hook(fdf->win, 2, 0, ft_mouse_move, fdf);
 }
 
 

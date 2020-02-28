@@ -6,11 +6,25 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:06:26 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/24 15:05:13 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:01:47 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+
+t_point			new_point(int x, int y, t_fdf *fdf)
+{
+	t_point		point;
+	int			i;
+
+	i = y * fdf->width + x;
+	point.x = x;
+	point.y = y;
+	point.z = fdf->coords[i];
+	point.color = (fdf->colors[i] == -1) ?
+				  ft_get_default_color(point.z, fdf) : fdf->colors[i];
+	return (point);
+}
 
 /*
 ** Для macOS endian равно 0, что значит обратный порядок.
@@ -21,9 +35,9 @@
 ** В формате с прямым порядком байтов -> обратный порядок компонентов цвета:
 */
 
-void		put_pixel(t_fdf *fdf, int x, int y, int color)
+void			put_pixel(t_fdf *fdf, int x, int y, int color)
 {
-	int 	i;
+	int			i;
 
 	if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT)
 	{
@@ -39,11 +53,11 @@ void		put_pixel(t_fdf *fdf, int x, int y, int color)
 ** error вычисление отклонения от воображаемой линии между точками.
 */
 
-void		draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp)
+void			draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp)
 {
 	t_point		delta;
 	t_point		sign;
-	t_point 	cur;
+	t_point		cur;
 	int			error;
 
 	delta.x = FT_ABS(p2.x - p1.x);
@@ -77,12 +91,12 @@ void		draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp)
 ** отрисовка карты происходит начиная с левого нижнего угла на право.
 */
 
-void		ft_draw(t_fdf *fdf)
+void			ft_draw(t_fdf *fdf)
 {
-	int 	x;
-	int 	y;
-	int 	*image;
-	int 	i;
+	int			x;
+	int			y;
+	int			*image;
+	int			i;
 
 	ft_bzero(fdf->data_addr, WIDTH * HEIGHT * (fdf->bits_per_pixel / 8));
 	image = (int *)(fdf->data_addr);

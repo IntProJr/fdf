@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 15:00:21 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/24 15:05:13 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:00:48 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Приближение/отдаление фигуры с помощью клавиатуры +(-) или колёсика мыши
 */
 
-void		zoom(int key, t_fdf *fdf)
+void	zoom(int key, t_fdf *fdf)
 {
 	if (key == NUM_PAD_PLUS || key == MOUSE_SCROLL_UP)
 		fdf->control->zoom++;
@@ -31,11 +31,11 @@ void		zoom(int key, t_fdf *fdf)
 ** Перемещение по карте с помощью стрелок на клавиатуре. Смена цвета.
 */
 
-void		move_or_color(int key, t_fdf *fdf)
+void	move_or_color(int key, t_fdf *fdf)
 {
 	if (key == MAIN_PAD_C)
 		fdf->control->menu ? (fdf->control->menu = 0)
-			: (fdf->control->menu = 1);
+						   : (fdf->control->menu = 1);
 	else if (key == NUM_PAD_0)
 		fdf->control->color = 1;
 	else if (key == NUM_PAD_5)
@@ -45,7 +45,7 @@ void		move_or_color(int key, t_fdf *fdf)
 	else if (key == ARROW_RIGHT)
 		fdf->control->x_move += 10;
 	else if (key == ARROW_UP)
-		fdf->control->y_move += 10;
+		fdf->control->y_move -= 10;
 	else
 		fdf->control->y_move += 10;
 	ft_draw(fdf);
@@ -85,7 +85,7 @@ void	change_pike(int key, t_fdf *fdf)
 	if (fdf->control->z_altitude < 0.2)
 		fdf->control->z_altitude = 0.2;
 	else if (fdf->control->z_altitude > 10)
-		fdf->control->z_altitude = 5;
+		fdf->control->z_altitude = 10;
 	ft_draw(fdf);
 }
 
@@ -93,7 +93,7 @@ void	change_pike(int key, t_fdf *fdf)
 ** Изменение типа проекции: I - изометрический, P - параллельный
 */
 
-void	change_projectiom(int key, t_fdf *fdf)
+void	change_projection(int key, t_fdf *fdf)
 {
 	fdf->control->alf = 0;
 	fdf->control->bet = 0;

@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 21:06:26 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/22 15:12:39 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Добавляем новую координату в стэк в начало списка.
 */
 
-void		put_new_coords(t_coord **coords_stack, t_coord *new)
+void			put_new_coords(t_coord **coords_stack, t_coord *new)
 {
 	if (coords_stack)
 	{
@@ -27,34 +27,12 @@ void		put_new_coords(t_coord **coords_stack, t_coord *new)
 }
 
 /*
-** Выделяем память под список t_coord и записываем туда координату параметра 'z'
-** - через atoi и цвет, если он был передан, - с помощью atoi_base.
-** Если цвет отсвутствует - значение принимается равным '-1'.
-*/
-
-t_coord		*ft_new_coord(char *s)
-{
-	t_coord	*coord;
-	int 	ptr;
-
-	ptr = 0;
-	if (!(coord = (t_coord *)ft_memalloc(sizeof(t_coord))))
-		fdf_exit(ERR_MEMORY_ALLOCATION);
-	if ((ptr = ft_check_color(s, ptr, 0)) == -1)
-		fdf_exit(ERR_MAP);
-	coord->z = ft_atoi(s);
-	coord->color = ptr ? ft_atoi_base(s + ptr, 16) : -1;
-	coord->next = NULL;
-	return (coord);
-}
-
-/*
 ** Достаём первую (верхнюю) координату стэка.
 */
 
-t_coord		*get_last_coord(t_coord **coords_stack)
+t_coord			*get_last_coord(t_coord **coords_stack)
 {
-	t_coord	*top;
+	t_coord *top;
 
 	top = NULL;
 	if (coords_stack && *coords_stack)
@@ -71,9 +49,9 @@ t_coord		*get_last_coord(t_coord **coords_stack)
 ** это необходимо для перехода одного цвета в другой.
 */
 
-void		stack_to_arrays(t_coord **coords_stack, t_fdf *fdf)
+void			stack_to_arrays(t_coord **coords_stack, t_fdf *fdf)
 {
-	t_coord 	*coord;
+	t_coord		*coord;
 
 	fdf->size = fdf->width * fdf->height - 1;
 	if ((!(fdf->coords = (int *)ft_memalloc(sizeof(int) * fdf->size + 1)))
@@ -92,6 +70,27 @@ void		stack_to_arrays(t_coord **coords_stack, t_fdf *fdf)
 	}
 }
 
+/*
+** Выделяем память под список t_coord и записываем туда координату параметра 'z'
+** - через atoi и цвет, если он был передан, - с помощью atoi_base.
+** Если цвет отсвутствует - значение принимается равным '-1'.
+*/
+
+t_coord			*ft_new_coord(char *s)
+{
+	t_coord		*coord;
+	int			ptr;
+
+	ptr = 0;
+	if (!(coord = (t_coord *)ft_memalloc(sizeof(t_coord))))
+		fdf_exit(ERR_MEMORY_ALLOCATION);
+	if ((ptr = ft_check_color(s, ptr, 0)) == -1)
+		fdf_exit(ERR_MAP);
+	coord->z = ft_atoi(s);
+	coord->color = ptr ? ft_atoi_base(s + ptr, 16) : -1;
+	coord->next = NULL;
+	return (coord);
+}
 
 /*
 ** Считываем построчно файл с помощью get_next_line, обрезаем пробельные символы
@@ -99,12 +98,12 @@ void		stack_to_arrays(t_coord **coords_stack, t_fdf *fdf)
 ** вынимаем координаты 'z'. Получаем стэк из координат вершин и стэк для цвета.
 */
 
-int			read_map(const int fd, t_coord **c_stack, t_fdf *fdf)
+int				read_map(const int fd, t_coord **c_stack, t_fdf *fdf)
 {
-	char 	*line;
-	int		result;
-	char 	**coords;
-	int 	i;
+	char		*line;
+	int			result;
+	char		**coords;
+	int			i;
 
 	while ((result = get_next_line(fd, &line)) == 1)
 	{
@@ -112,11 +111,11 @@ int			read_map(const int fd, t_coord **c_stack, t_fdf *fdf)
 			fdf_exit(ERR_MAP_READING);
 		i = -1;
 		while (coords[++i])
-			put_new_coords(c_stack, ft_new_coord(coords[i]));
+			put_new_coords(c_stack, ft_new_coord((coords[i])));
 		if (fdf->height == 0)
 			fdf->width = i;
 		if (fdf->width != ft_wordcount(line, ' '))
-			fdf_exit (ERR_MAP);
+			fdf_exit(ERR_MAP);
 		ft_clear_mass(&coords);
 		ft_strdel(&line);
 		fdf->height++;
