@@ -12,6 +12,7 @@
 
 #include "../includes/fdf.h"
 #include <stdio.h>
+#include "../includes/for_utilits.h"
 
 void	fdf_exit(char *s)
 {

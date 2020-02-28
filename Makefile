@@ -20,9 +20,9 @@ CFLAGS = -g
 FRAMEWORKS = -framework OpenGL -framework Appkit
 
 MY_LIB = ./libft/
-MLX_LIB = ./mlx/
-INC = ./mlx/ ./libft/includes/ ./includes
-INCLUDES = -I ./mlx/ -I ./libft/includes/ -I ./includes/
+MLX_LIB = ./minilibx_macos/
+INC = ./minilibx_macos/ ./libft/includes/ ./includes
+INCLUDES = -I ./minilibx_macos/ -I ./libft/includes/ -I ./includes/
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_NAME))

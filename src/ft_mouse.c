@@ -6,11 +6,12 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 15:32:29 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 18:58:52 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+#include "../includes/for_utilits.h"
 
 /*
 ** mouse_pressed_hook - для события нажатия мыши, которое передается
@@ -18,7 +19,7 @@
 ** любые параметры также передаются в mlx_hook () функции, когда мышь нажата.
 */
 
-int 		ft_mouse_press(int button, int x, int y, void *param)
+int			ft_mouse_press(int button, int x, int y, void *param)
 {
 	t_fdf	*fdf;
 
@@ -36,9 +37,9 @@ int 		ft_mouse_press(int button, int x, int y, void *param)
 ** Клавиша мыши не нажата (флаг is_pressed на ноль)
 */
 
-int		ft_mouse_not_press(int button, int x, int y, void *param)
+int			ft_mouse_not_press(int button, int x, int y, void *param)
 {
-	t_fdf		*fdf;
+	t_fdf	*fdf;
 
 	(void)x;
 	(void)y;
@@ -49,10 +50,10 @@ int		ft_mouse_not_press(int button, int x, int y, void *param)
 }
 
 /*
-** Двигаем мышью
+** Handle mouse move
 */
 
-int 	ft_mouse_move(int x, int y, void *param)
+int			ft_mouse_move(int x, int y, void *param)
 {
 	t_fdf	*fdf;
 

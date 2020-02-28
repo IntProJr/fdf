@@ -6,11 +6,12 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:13:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 19:04:38 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+#include "../includes/for_utilits.h"
 
 /*
 ** mlx_init: даёт соединение между программным обеспечением и дисплеем
@@ -28,13 +29,13 @@
 t_fdf			*ft_mymlx_init(t_fdf *fdf)
 {
 	if (!(fdf->mlx = mlx_init()))
-		fdf_exit(ERROR_OF_FDF_INITIALIZING);
-	if (!(fdf->win = mlx_new_window(fdf->mlx, WIDTH, HEIGHT, "FDF")))
-		fdf_exit(ERROR_OF_FDF_INITIALIZING);
+		fdf_exit(ERR_FDF_INIT);
+	if (!(fdf->win = mlx_new_window(fdf->mlx, WIDTH, HEIGHT, "FdF")))
+		fdf_exit(ERR_FDF_INIT);
 	if (!(fdf->img = mlx_new_image(fdf->mlx, WIDTH, HEIGHT)))
-		fdf_exit(ERROR_OF_FDF_INITIALIZING);
+		fdf_exit(ERR_FDF_INIT);
 	fdf->data_addr = mlx_get_data_addr(fdf->img, &(fdf->bits_per_pixel),
-			&(fdf->size_line), &(fdf->endian));
+									   &(fdf->size_line), &(fdf->endian));
 	if (!(fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse))))
 		fdf_exit(ERR_FDF_INIT);
 	fdf->control = control_init(fdf);
@@ -51,9 +52,9 @@ t_fdf			*ft_mymlx_init(t_fdf *fdf)
 void			ft_setup_key_hook(t_fdf *fdf)
 {
 	mlx_hook(fdf->win, 2, 0, key_press, fdf);
-	mlx_hook(fdf->win, 2, 0, ft_mouse_press, fdf);
+	mlx_hook(fdf->win, 4, 0, ft_mouse_press, fdf);
 	mlx_hook(fdf->win, 5, 0, ft_mouse_not_press, fdf);
-	mlx_hook(fdf->win, 2, 0, ft_mouse_move, fdf);
+	mlx_hook(fdf->win, 6, 0, ft_mouse_move, fdf);
 }
 
 

@@ -6,11 +6,12 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 22:22:11 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 16:29:45 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 18:57:13 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+#include "../includes/for_utilits.h"
 
 /*
 ** fdf->control->alf: поворот координаты по оси х

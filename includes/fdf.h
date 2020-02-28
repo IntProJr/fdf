@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 15:01:54 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 16:18:56 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/02/28 19:01:36 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line.h"
-#include "for_utilits.h"
 #include <math.h>
 #include "../minilibx_macos/mlx.h"
 #include <fcntl.h>
@@ -112,31 +111,81 @@ typedef struct				s_fdf
 	t_mouse					*mouse;
 }							t_fdf;
 
+/*
+** main.c управление окнами и библиотекой minilibx
+*/
 
+t_fdf				*ft_mymlx_init(t_fdf *fdf);
+void				ft_setup_key_hook(t_fdf *fdf);
 
-void						fdf_exit(char *s);
-t_fdf						*fdf_init(void);
-int							read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
-t_point						new_point(int x, int y, t_fdf *fdf);
-void						put_new_coords(t_coord **coords_stack, t_coord *new);
-int							ft_check_color(const char *str, int ptr, int i);
-t_fdf						*ft_mlx_init(t_fdf *fdf);
-void						ft_draw(t_fdf *fdf);
-int 						f_color(t_point cur, t_point start, t_point end, t_point d);
-int 						ft_get_default_color(int z, t_fdf *fdf);
-t_point						project(int x, int y, t_fdf *fdf);
-t_control					*control_init(t_fdf *fdf);
-t_control					*control_init(t_fdf *fdf);
-int							key_press(int key, void *param);
-int							ft_mouse_press(int button, int x, int y, void *param);
-void						zoom(int key, t_fdf *fdf);
-void						move_or_color(int key, t_fdf *fdf);
-void						change_rotation(int key, t_fdf *fdf);
-void						change_pike(int key, t_fdf *fdf);
-void						change_projectiom(int key, t_fdf *fdf);
-void						print_menu(t_fdf *fdf, int y);
-int							ft_mouse_not_press(int button, int x, int y, void *param);
-int							ft_mouse_move(int x, int y, void *param);
-void						change_projection(int key, t_fdf *fdf);
+/*
+** fdf_init_struct.c инициализация структуры fdf и control
+*/
+
+t_fdf				*fdf_init(void);
+t_control			*control_init(t_fdf *fdf);
+
+/*
+** fdf_read_map.c чтение карты и заполнение массивов intов
+*/
+
+int					read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
+void				stack_to_arrays(t_coord **coords_stack, t_fdf *fdf);
+void				put_new_coords(t_coord **coords_stack, t_coord *new);
+t_coord				*get_last_coord(t_coord **coords_stack);
+t_coord				*ft_new_coord(char *s);
+
+/*
+** fdf_key_hook.c контроль управления через клавиатуру
+*/
+
+void				change_projection(int key, t_fdf *fdf);
+void				change_pike(int key, t_fdf *fdf);
+void				change_rotation(int key, t_fdf *fdf);
+void				move_or_color(int key, t_fdf *fdf);
+void				zoom(int key, t_fdf *fdf);
+
+/*
+** fdf_mouse.c контроль управления с помощью мыши
+*/
+
+int					ft_mouse_press(int button, int x, int y, void *param);
+int					ft_mouse_not_press(int button, int x, int y, void *param);
+int					ft_mouse_move(int x, int y, void *param);
+
+/*
+** fdf_draw_map.c отрисовка пиксельный линий в окно
+*/
+
+void				ft_draw(t_fdf *fdf);
+void				draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp);
+void				put_pixel(t_fdf *fdf, int x, int y, int color);
+t_point				new_point(int x, int y, t_fdf *fdf);
+
+/*
+** fdf_give_color.c отрисовка пиксельный линий в окно
+*/
+
+int					f_color(t_point cur, t_point start, t_point end, t_point d);
+int					ft_line_interpol(int start, int end, double percent);
+int					ft_get_default_color(int z, t_fdf *fdf);
+double				ft_get_percent(int start, int end, int current);
+
+/*
+** fdf_projection.c регулировка положения карты в окне
+*/
+
+t_point				project(int x, int y, t_fdf *fdf);
+void				ft_iso(int *x, int *y, int z);
+void				ft_rotate_xyz(int *y, int *z, int *x, t_fdf *fdf);
+
+/*
+** fdf_utilits.c дополнительные функции, отрисовка меню управления
+*/
+
+void				fdf_exit(char *s);
+void				print_menu(t_fdf *fdf, int y);
+int					ft_check_color(const char *str, int ptr, int i);
+int					key_press(int key, void *param);
 
 #endif

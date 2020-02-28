@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+#include "../includes/for_utilits.h"
 
 t_point			new_point(int x, int y, t_fdf *fdf)
 {
