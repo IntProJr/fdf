@@ -127,7 +127,10 @@ t_point						project(int x, int y, t_fdf *fdf);
 t_control					*control_init(t_fdf *fdf);
 t_control					*control_init(t_fdf *fdf);
 int							key_press(int key, void *param);
-void						zoom(int key, t_fdf *fdf);
 int							ft_mouse_press(int button, int x, int y, void *param);
-
+void		zoom(int key, t_fdf *fdf);
+void		move_or_color(int key, t_fdf *fdf);
+void	change_rotation(int key, t_fdf *fdf);
+void	change_pike(int key, t_fdf *fdf);
+void	change_projectiom(int key, t_fdf *fdf);
 #endif

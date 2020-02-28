@@ -23,7 +23,7 @@ void		zoom(int key, t_fdf *fdf)
 	else if (key == NUM_PAD_MINUS || key == MOUSE_SCROLL_DOWN)
 		fdf->control->zoom--;
 	if (fdf->control->zoom < 1)
-		fdf->control->zoom == 1;
+		fdf->control->zoom = 1;
 	ft_draw(fdf);
 }
 
@@ -31,11 +31,76 @@ void		zoom(int key, t_fdf *fdf)
 ** Перемещение по карте с помощью стрелок на клавиатуре. Смена цвета.
 */
 
-void		move_or_color(int key)
+void		move_or_color(int key, t_fdf *fdf)
 {
 	if (key == MAIN_PAD_C)
 		fdf->control->menu ? (fdf->control->menu = 0)
 			: (fdf->control->menu = 1);
 	else if (key == NUM_PAD_0)
-		fdf->control->colo
+		fdf->control->color = 1;
+	else if (key == NUM_PAD_5)
+		fdf->control->color = 0;
+	else if (key == ARROW_LEFT)
+		fdf->control->x_move -= 10;
+	else if (key == ARROW_RIGHT)
+		fdf->control->x_move += 10;
+	else if (key == ARROW_UP)
+		fdf->control->y_move += 10;
+	else
+		fdf->control->y_move += 10;
+	ft_draw(fdf);
+}
+
+/*
+** Поворот фигуры
+*/
+
+void	change_rotation(int key, t_fdf *fdf)
+{
+	if (key == NUM_PAD_2)
+		fdf->control->alf += 0.05;
+	else if (key == NUM_PAD_8)
+		fdf->control->alf -= 0.05;
+	else if (key == NUM_PAD_4)
+		fdf->control->bet -= 0.05;
+	else if (key == NUM_PAD_6)
+		fdf->control->bet += 0.05;
+	else if (key == MAIN_PAD_MORE)
+		fdf->control->gam += 0.05;
+	else if (key == MAIN_PAD_LESS)
+		fdf->control->gam -= 0.05;
+	ft_draw(fdf);
+}
+
+/*
+** Изменение параметра z. Управление вершинами(глубиной) карты
+*/
+
+void	change_pike(int key, t_fdf *fdf)
+{
+	if (key == NUM_PAD_STAR)
+		fdf->control->z_altitude -= 0.2;
+	else if (key == NUM_PAD_SLASH)
+		fdf->control->z_altitude += 0.2;
+	if (fdf->control->z_altitude < 0.2)
+		fdf->control->z_altitude = 0.2;
+	else if (fdf->control->z_altitude > 10)
+		fdf->control->z_altitude = 5;
+	ft_draw(fdf);
+}
+
+/*
+** Изменение типа проекции: I - изометрический, P - параллельный
+*/
+
+void	change_projectiom(int key, t_fdf *fdf)
+{
+	fdf->control->alf = 0;
+	fdf->control->bet = 0;
+	fdf->control->gam = 0;
+	if (key == MAIN_PAD_I)
+		fdf->control->projection = 1;
+	else if (key == MAIN_PAD_P)
+		fdf->control->projection = 0;
+	ft_draw(fdf);
 }
