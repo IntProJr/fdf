@@ -29,15 +29,15 @@
 t_fdf			*mlx_initialization(t_fdf *fdf)
 {
 	if (!(fdf->mlx = mlx_init()))
-		fdf_exit(ERR_FDF_INIT);
+		fdf_exit(ERROR_OF_FDF_INITIALIZING);
 	if (!(fdf->win = mlx_new_window(fdf->mlx, WIDTH, HEIGHT, "FdF")))
-		fdf_exit(ERR_FDF_INIT);
+		fdf_exit(ERROR_OF_FDF_INITIALIZING);
 	if (!(fdf->img = mlx_new_image(fdf->mlx, WIDTH, HEIGHT)))
-		fdf_exit(ERR_FDF_INIT);
+		fdf_exit(ERROR_OF_FDF_INITIALIZING);
 	fdf->data_addr = mlx_get_data_addr(fdf->img, &(fdf->bits_per_pixel),
 									   &(fdf->size_line), &(fdf->endian));
 	if (!(fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse))))
-		fdf_exit(ERR_FDF_INIT);
+		fdf_exit(ERROR_OF_FDF_INITIALIZING);
 	fdf->control = control_init(fdf);
 	return (fdf);
 }
@@ -49,20 +49,13 @@ t_fdf			*mlx_initialization(t_fdf *fdf)
 ** Необходим один параметр - идентификатор соединения mlx_ptr
 */
 
-void			ft_setup_key_hook(t_fdf *fdf)
+void			setup_key_hook(t_fdf *fdf)
 {
 	mlx_hook(fdf->win, 2, 0, key_press, fdf);
 	mlx_hook(fdf->win, 4, 0, ft_mouse_press, fdf);
 	mlx_hook(fdf->win, 5, 0, ft_mouse_not_press, fdf);
 	mlx_hook(fdf->win, 6, 0, ft_mouse_move, fdf);
 }
-
-
-/*
-** Инициализация структуры fdf и чтение файла через файловый дескриптор.
-** Инициализация функций библиотеки mlx, заполнение окна пикселями.
-** Подключение событий клавиатуры/мыши.
-*/
 
 int				main(int argc, char **argv)
 {
@@ -79,7 +72,7 @@ int				main(int argc, char **argv)
 		fdf_exit(ERR_MAP_READING);
 	mlx_initialization(fdf);
 	ft_draw(fdf);
-	ft_setup_key_hook(fdf);
+	setup_key_hook(fdf);
 	mlx_loop(fdf->mlx);
 	return (0);
 }

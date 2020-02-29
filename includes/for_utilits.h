@@ -19,7 +19,6 @@
 # define ERR_MEMORY_ALLOCATION		"FdF: failed to allocate memory"
 # define ERROR_OF_FDF_INITIALIZING	"FdF initialization error"
 # define ERR_CONTROL				"Error of control initialization"
-# define ERR_FDF_INIT				"FdF error of initializing"
 # define MAIN_PAD_ESC				53
 
 # define NUM_PAD_PLUS				69

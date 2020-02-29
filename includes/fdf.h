@@ -104,7 +104,7 @@ typedef struct				s_fdf
 }							t_fdf;
 
 t_fdf						*mlx_initialization(t_fdf *fdf);
-void						ft_setup_key_hook(t_fdf *fdf);
+void						setup_key_hook(t_fdf *fdf);
 t_fdf						*fdf_init(void);
 t_control					*control_init(t_fdf *fdf);
 int							read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
