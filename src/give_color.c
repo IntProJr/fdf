@@ -38,15 +38,15 @@ int			ft_get_default_color(int z, t_fdf *fdf)
 
 	percent = ft_get_percent(fdf->z_min, fdf->z_max, z);
 	if (percent < 0.2)
-		return ((fdf->control->color) ? COLOR_SUN : COLOR_SKY);
+		return ((fdf->control->color) ? COLOR_TEAL : COLOR_NAVY);
 	else if (percent < 0.4)
-		return ((fdf->control->color) ? COLOR_ACID_GR : COLOR_BLOOD);
+		return ((fdf->control->color) ? COLOR_CORAL : COLOR_BLOOD);
 	else if (percent < 0.6)
-		return ((fdf->control->color) ? COLOR_GREEN : COLOR_PINK);
+		return ((fdf->control->color) ? COLOR_FOREST : COLOR_SLATE);
 	else if (percent < 0.8)
-		return ((fdf->control->color) ? COLOR_SKY : COLOR_JAFFA);
+		return ((fdf->control->color) ? COLOR_NAVY : COLOR_GOLDEN);
 	else
-		return ((fdf->control->color) ? COLOR_WATER : COLOR_ORANGE);
+		return ((fdf->control->color) ? COLOR_GREEN : COLOR_CORAL);
 }
 
 /*

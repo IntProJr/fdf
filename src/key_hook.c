@@ -68,7 +68,7 @@ void	change_rotation(int key, t_fdf *fdf)
 		fdf->control->bet += 0.05;
 	else if (key == MAIN_PAD_MORE)
 		fdf->control->gam += 0.05;
-	else if (key == MAIN_PAD_LESS)
+	else if (key == MAIN_PAD_LESS) 
 		fdf->control->gam -= 0.05;
 	ft_draw(fdf);
 }

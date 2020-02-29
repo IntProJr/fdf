@@ -27,14 +27,6 @@
 # define HEIGHT				1080
 # define RADIAN				0.523599
 
-# define ERR_USAGE					"Usage: ./fdf source_file"
-# define ERR_MAP					"Incorrect MAP_FILE"
-# define ERR_MAP_READING			"Reading error"
-# define ERR_MEMORY_ALLOCATION		"FdF: failed to allocate memory"
-# define ERROR_OF_FDF_INITIALIZING		"FdF initialization error"
-# define ERR_CONTROL		"Error of control initialization"
-# define ERR_FDF_INIT		"FdF error of initializing"
-
 # define FT_INT_MAX			((int)2147483647)
 # define FT_INT_MIN			((int)-2147483648)
 # define BACKGROUND			0xFFFFFF
@@ -42,15 +34,15 @@
 # define FT_ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define FT_MIN(A, B) (((A) < (B)) ? (A) : (B))
 
-# define COLOR_WATER		0x00F7FF
-# define COLOR_GREEN		0x00FF00
-# define COLOR_SUN			0xF3FF00
-# define COLOR_SKY			0x14FCF2
+# define COLOR_GREEN		0x008000
+# define COLOR_FOREST		0x228B22
+# define COLOR_TEAL			0x008080
+# define COLOR_NAVY			0x000080
 # define COLOR_BLOOD		0xFF0000
-# define COLOR_PINK			0xEC4B27
-# define COLOR_JAFFA		0xEF8633
-# define COLOR_ORANGE		0xF3AF3D
-# define COLOR_ACID_GR		0x80FF00
+# define COLOR_SLATE		0x483D8B
+# define COLOR_GOLDEN		0xDAA520
+# define COLOR_CORAL		0xF08080
+# define COLOR_D_BLUE		0x00008B
 # define RADIAN				0.523599
 
 typedef struct				s_point
@@ -111,81 +103,37 @@ typedef struct				s_fdf
 	t_mouse					*mouse;
 }							t_fdf;
 
-/*
-** main.c управление окнами и библиотекой minilibx
-*/
-
-t_fdf				*ft_mymlx_init(t_fdf *fdf);
-void				ft_setup_key_hook(t_fdf *fdf);
-
-/*
-** fdf_init_struct.c инициализация структуры fdf и control
-*/
-
-t_fdf				*fdf_init(void);
-t_control			*control_init(t_fdf *fdf);
-
-/*
-** fdf_read_map.c чтение карты и заполнение массивов intов
-*/
-
-int					read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
-void				stack_to_arrays(t_coord **coords_stack, t_fdf *fdf);
-void				put_new_coords(t_coord **coords_stack, t_coord *new);
-t_coord				*get_last_coord(t_coord **coords_stack);
-t_coord				*ft_new_coord(char *s);
-
-/*
-** fdf_key_hook.c контроль управления через клавиатуру
-*/
-
-void				change_projection(int key, t_fdf *fdf);
-void				change_pike(int key, t_fdf *fdf);
-void				change_rotation(int key, t_fdf *fdf);
-void				move_or_color(int key, t_fdf *fdf);
-void				zoom(int key, t_fdf *fdf);
-
-/*
-** fdf_mouse.c контроль управления с помощью мыши
-*/
-
-int					ft_mouse_press(int button, int x, int y, void *param);
-int					ft_mouse_not_press(int button, int x, int y, void *param);
-int					ft_mouse_move(int x, int y, void *param);
-
-/*
-** fdf_draw_map.c отрисовка пиксельный линий в окно
-*/
-
-void				ft_draw(t_fdf *fdf);
-void				draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp);
-void				put_pixel(t_fdf *fdf, int x, int y, int color);
-t_point				new_point(int x, int y, t_fdf *fdf);
-
-/*
-** fdf_give_color.c отрисовка пиксельный линий в окно
-*/
-
-int					f_color(t_point cur, t_point start, t_point end, t_point d);
-int					ft_line_interpol(int start, int end, double percent);
-int					ft_get_default_color(int z, t_fdf *fdf);
-double				ft_get_percent(int start, int end, int current);
-
-/*
-** fdf_projection.c регулировка положения карты в окне
-*/
-
-t_point				project(int x, int y, t_fdf *fdf);
-void				ft_iso(int *x, int *y, int z);
-void				ft_rotate_xyz(int *y, int *z, int *x, t_fdf *fdf);
-
-/*
-** fdf_utilits.c дополнительные функции, отрисовка меню управления
-*/
-
-void				fdf_exit(char *s);
-void				print_menu(t_fdf *fdf, int y);
-int					ft_check_color(const char *str, int ptr, int i);
-int					key_press(int key, void *param);
+t_fdf						*mlx_initialization(t_fdf *fdf);
+void						ft_setup_key_hook(t_fdf *fdf);
+t_fdf						*fdf_init(void);
+t_control					*control_init(t_fdf *fdf);
+int							read_map(const int fd, t_coord **c_stack, t_fdf *fdf);
+void						stack_to_arrays(t_coord **coords_stack, t_fdf *fdf);
+void						put_new_coords(t_coord **coords_stack, t_coord *new);
+t_coord						*get_last_coord(t_coord **coords_stack);
+t_coord						*ft_new_coord(char *s);
+void						change_projection(int key, t_fdf *fdf);
+void						change_pike(int key, t_fdf *fdf);
+void						change_rotation(int key, t_fdf *fdf);
+void						move_or_color(int key, t_fdf *fdf);
+void						zoom(int key, t_fdf *fdf);
+int							ft_mouse_press(int button, int x, int y, void *param);
+int							ft_mouse_not_press(int button, int x, int y, void *param);
+int							ft_mouse_move(int x, int y, void *param);
+void						ft_draw(t_fdf *fdf);
+void						draw_line(t_point p1, t_point p2, t_fdf *fdf, int tmp);
+void						put_pixel(t_fdf *fdf, int x, int y, int color);
+t_point						new_point(int x, int y, t_fdf *fdf);
+int							f_color(t_point cur, t_point start, t_point end, t_point d);
+int							ft_line_interpol(int start, int end, double percent);
+int							ft_get_default_color(int z, t_fdf *fdf);
+double						ft_get_percent(int start, int end, int current);
+t_point						project(int x, int y, t_fdf *fdf);
+void						ft_iso(int *x, int *y, int z);
+void						ft_rotate_xyz(int *y, int *z, int *x, t_fdf *fdf);
+void						fdf_exit(char *s);
+void						print_menu(t_fdf *fdf, int y);
+int							ft_check_color(const char *str, int ptr, int i);
+int							key_press(int key, void *param);
 
 #endif

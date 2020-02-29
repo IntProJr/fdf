@@ -12,8 +12,8 @@
 
 NAME = libft.a
 
-INC = -I ./includes
-INC_FILE = ./includes/libft.h ./includes/get_next_line.h
+INCLUDES = -I ./includes
+INCLUDES_FILE = ./includes/libft.h ./includes/get_next_line.h
 SRC_DIR = src
 OBJ_DIR = object
 
@@ -98,9 +98,9 @@ $(NAME): $(OBJ)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_FILE)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INCLUDES_FILE)
 		@mkdir -p $(OBJ_DIR)
-		$(CC) $(FLAG) $(INC) -c $< -o $@
+		$(CC) $(FLAG) $(INCLUDES) -c $< -o $@
 
 clean:
 		@/bin/rm -rf $(OBJ_DIR)

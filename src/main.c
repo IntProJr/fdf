@@ -26,7 +26,7 @@
 */
 
 
-t_fdf			*ft_mymlx_init(t_fdf *fdf)
+t_fdf			*mlx_initialization(t_fdf *fdf)
 {
 	if (!(fdf->mlx = mlx_init()))
 		fdf_exit(ERR_FDF_INIT);
@@ -77,7 +77,7 @@ int				main(int argc, char **argv)
 		fdf_exit(ERR_MAP);
 	if (!(fdf = fdf_init()) || read_map(fd, &c_stack, fdf) == -1)
 		fdf_exit(ERR_MAP_READING);
-	ft_mymlx_init(fdf);
+	mlx_initialization(fdf);
 	ft_draw(fdf);
 	ft_setup_key_hook(fdf);
 	mlx_loop(fdf->mlx);
