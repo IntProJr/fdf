@@ -95,4 +95,6 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t			ft_wordcount(const char *s, char c);
 void			ft_clear_mass(char ***mas);
+int				ft_isspace(char c);
+
 #endif

@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../libft/includes/libft.h
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Desktop/fdf/libft/includes/libft.h
 ../libft/includes/get_next_line.h
-/Users/lrosalee/Documents/fdf/libft/includes/get_next_line.h
+/Users/lrosalee/Desktop/fdf/libft/includes/get_next_line.h
 math.h
 -
 ../minilibx_macos/mlx.h
-/Users/lrosalee/Documents/fdf/minilibx_macos/mlx.h
+/Users/lrosalee/Desktop/fdf/minilibx_macos/mlx.h
 fcntl.h
 -
 stdlib.h
@@ -26,9 +26,9 @@ limits.h
 errno.h
 -
 
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/libft/includes/get_next_line.h
+/Users/lrosalee/Desktop/fdf/libft/includes/get_next_line.h
 string.h
 -
 stdlib.h
@@ -36,9 +36,9 @@ stdlib.h
 unistd.h
 -
 libft.h
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Desktop/fdf/libft/includes/libft.h
 
-/Users/lrosalee/Documents/fdf/libft/includes/libft.h
+/Users/lrosalee/Desktop/fdf/libft/includes/libft.h
 stdlib.h
 -
 unistd.h
@@ -48,61 +48,61 @@ string.h
 fcntl.h
 -
 
-/Users/lrosalee/Documents/fdf/minilibx_macos/mlx.h
+/Users/lrosalee/Desktop/fdf/minilibx_macos/mlx.h
 
-/Users/lrosalee/Documents/fdf/src/draw_map.c
+/Users/lrosalee/Desktop/fdf/src/draw_map.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/ft_mouse.c
+/Users/lrosalee/Desktop/fdf/src/ft_mouse.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/give_color.c
+/Users/lrosalee/Desktop/fdf/src/give_color.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/initialize.c
+/Users/lrosalee/Desktop/fdf/src/initialize.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/key_hook.c
+/Users/lrosalee/Desktop/fdf/src/key_hook.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/main.c
+/Users/lrosalee/Desktop/fdf/src/main.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/projection.c
+/Users/lrosalee/Desktop/fdf/src/projection.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/read_map.c
+/Users/lrosalee/Desktop/fdf/src/read_map.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 
-/Users/lrosalee/Documents/fdf/src/utilits.c
+/Users/lrosalee/Desktop/fdf/src/utilits.c
 ../includes/fdf.h
-/Users/lrosalee/Documents/fdf/includes/fdf.h
+/Users/lrosalee/Desktop/fdf/includes/fdf.h
 stdio.h
 -
 ../includes/for_utilits.h
-/Users/lrosalee/Documents/fdf/includes/for_utilits.h
+/Users/lrosalee/Desktop/fdf/includes/for_utilits.h
 

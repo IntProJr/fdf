@@ -6,12 +6,12 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 14:08:43 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/02 12:11:51 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FOR_UTILITS_H
-#define FOR_UTILITS_H
+# define FOR_UTILITS_H
 
 # define ERR_USAGE					"Usage: ./fdf source_file"
 # define ERR_MAP					"Incorrect MAP_FILE"
@@ -19,32 +19,32 @@
 # define ERR_MEMORY_ALLOCATION		"FdF: failed to allocate memory"
 # define ERROR_OF_FDF_INITIALIZING	"FdF initialization error"
 # define ERR_CONTROL				"Error of control initialization"
-# define MAIN_PAD_ESC				53
+# define ESC						53
 
-# define NUM_PAD_PLUS				69
-# define NUM_PAD_MINUS				78
+# define PLUS				69
+# define MINUS				78
 
-# define ARROW_LEFT					123
-# define ARROW_RIGHT				124
-# define ARROW_UP					126
-# define ARROW_DOWN					125
+# define LEFT					123
+# define RIGHT				124
+# define UP					126
+# define DOWN					125
 
-# define NUM_PAD_0					82
-# define NUM_PAD_5					87
-# define MAIN_PAD_C					8
-# define MAIN_PAD_LESS				43
-# define MAIN_PAD_MORE				47
-# define NUM_PAD_4					86
-# define NUM_PAD_6					88
-# define NUM_PAD_2					84
-# define NUM_PAD_8					91
-# define NUM_PAD_STAR				67
-# define NUM_PAD_SLASH				75
-# define MAIN_PAD_P					35
-# define MAIN_PAD_I					34
+# define PAD_0					82
+# define PAD_5					87
+# define PAD_C					8
+# define PAD_LESS				43
+# define MORE				47
+# define PAD_4					86
+# define PAD_6					88
+# define PAD_2					84
+# define PAD_8					91
+# define PAD_STAR				67
+# define PAD_SLASH				75
+# define PAD_P					35
+# define PAD_I					34
 
-# define MOUSE_LEFT_BUTTON			1
-# define MOUSE_SCROLL_UP			4
-# define MOUSE_SCROLL_DOWN			5
+# define LEFT_BUTTON			1
+# define SCROLL_UP			4
+# define SCROLL_DOWN			5
 
 #endif

@@ -3,14 +3,11 @@ project(fdf C)
 
 set(CMAKE_C_STANDARD 11)
 
+include_directories(.)
 include_directories(includes)
 include_directories(libft/includes)
-
 include_directories(./minilibx_macos)
-
 find_library(MLX mlx ./includes/minilibx_macos)
-
-#link_directories(./minilibx_macos)
 
 add_executable(fdf
 		includes/fdf.h
@@ -94,7 +91,7 @@ add_executable(fdf
 		src/main.c
 		src/projection.c
 		src/read_map.c
-		src/utilits.c)
+		src/utilits.c libft/src/ft_isspace.c)
 
 target_link_libraries(fdf PUBLIC "-framework AppKit" "-framework OpenGL")
 

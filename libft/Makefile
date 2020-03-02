@@ -18,7 +18,8 @@ SRC_DIR = src
 OBJ_DIR = object
 
 SRC = ft_atoi.c \
-      	ft_memset.c\
+      	ft_memset.c \
+      	ft_isspace.c \
       	ft_atoi_base.c \
       	ft_strlen.c \
       	ft_strcmp.c \

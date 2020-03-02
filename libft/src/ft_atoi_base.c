@@ -6,50 +6,91 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 16:40:35 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/02 12:05:34 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isblank(char c)
+#include "../includes/libft.h"
+
+static int			ft_isdigit_base(char c, int base)
 {
-	if (c <= 32)
-		return (1);
-	return (0);
+	const char		*digits = "0123456789ABCDEF";
+	int				i;
+
+	i = 0;
+	while (i < base)
+	{
+		if (digits[i] == ft_toupper(c))
+			return (i);
+		i++;
+	}
+	return (-1);
 }
 
-int		isvalid(char c, int base)
+static int			ft_has_prefix(const char *str, int base)
 {
-	char digits[17] = "0123456789abcdef";
-	char digits2[17] = "0123456789ABCDEF";
+	size_t			i;
 
-	while (base--)
-		if (digits[base] == c || digits2[base] == c)
+	i = 0;
+	if (base == 2 || base == 8 || base == 16)
+	{
+		if (str[i++] != '0')
+			return (0);
+		if (base == 2 && (str[i] == 'b' || str[i] == 'B'))
 			return (1);
+		if (base == 16 && (str[i] == 'x' || str[i] == 'X'))
+			return (1);
+		if (base == 8)
+			return (1);
+	}
 	return (0);
 }
 
-int		value_of(char c)
+int					ft_isnumber(char *str, int base)
 {
-	if (c >= '0' && c <= '9')
-		return (c - '0');
-	else if (c >= 'a' && c <= 'f')
-		return (c - 'a' + 10);
-	else if (c >= 'A' && c <= 'F')
-		return (c - 'A' + 10);
-	return (0);
+	size_t			i;
+	size_t			digits;
+
+	i = 0;
+	digits = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (base != 10 && !ft_has_prefix(&str[i], base))
+		return (0);
+	if (base == 2 || base == 16)
+		i += 2;
+	else if (base == 8)
+		i++;
+	else if (base == 10 && (str[i] == '-' || str[i] == '+'))
+		i++;
+	while (ft_isdigit_base(str[i], base) >= 0)
+	{
+		i++;
+		digits++;
+	}
+	return ((!str[i] && digits) ? 1 : 0);
 }
 
-int		ft_atoi_base(const char *str, int str_base)
+int					ft_atoi_base(const char *str, int base)
 {
-	int result;
-	int sign;
+	unsigned long	result;
+	size_t			i;
+	int				sign;
 
 	result = 0;
-	while (ft_isblank(*str))
-		str++;
-	sign = (*str == '-') ? -1 : 1;
-	(*str == '-' || *str == '+') ? ++str : 0;
-	while (isvalid(*str, str_base))
-		result = result * str_base + value_of(*str++);
-	return (result * sign);
+	i = 0;
+	sign = 1;
+	while (ft_isspace(str[i]))
+		i++;
+	if (base != 10 && !ft_has_prefix(&str[i], base))
+		return (0);
+	if (base == 2 || base == 16)
+		i += 2;
+	else if (base == 8)
+		i++;
+	else if (base == 10 && (str[i] == '-' || str[i] == '+'))
+		sign = (str[i++] == '-') ? -1 : 1;
+	while (ft_isdigit_base(str[i], base) >= 0)
+		result = result * base + ft_isdigit_base(str[i++], base);
+	return ((int)(result * sign));
 }

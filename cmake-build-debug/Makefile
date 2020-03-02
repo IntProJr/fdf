@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lrosalee/Documents/fdf
+CMAKE_SOURCE_DIR = /Users/lrosalee/Desktop/fdf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lrosalee/Documents/fdf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lrosalee/Desktop/fdf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Desktop/fdf/cmake-build-debug/CMakeFiles /Users/lrosalee/Desktop/fdf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Documents/fdf/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lrosalee/Desktop/fdf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -419,6 +419,33 @@ libft/src/ft_isprint.s: libft/src/ft_isprint.c.s
 libft/src/ft_isprint.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/src/ft_isprint.c.s
 .PHONY : libft/src/ft_isprint.c.s
+
+libft/src/ft_isspace.o: libft/src/ft_isspace.c.o
+
+.PHONY : libft/src/ft_isspace.o
+
+# target to build an object file
+libft/src/ft_isspace.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/src/ft_isspace.c.o
+.PHONY : libft/src/ft_isspace.c.o
+
+libft/src/ft_isspace.i: libft/src/ft_isspace.c.i
+
+.PHONY : libft/src/ft_isspace.i
+
+# target to preprocess a source file
+libft/src/ft_isspace.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/src/ft_isspace.c.i
+.PHONY : libft/src/ft_isspace.c.i
+
+libft/src/ft_isspace.s: libft/src/ft_isspace.c.s
+
+.PHONY : libft/src/ft_isspace.s
+
+# target to generate assembly for a file
+libft/src/ft_isspace.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/src/ft_isspace.c.s
+.PHONY : libft/src/ft_isspace.c.s
 
 libft/src/ft_itoa.o: libft/src/ft_itoa.c.o
 
@@ -2271,6 +2298,9 @@ help:
 	@echo "... libft/src/ft_isprint.o"
 	@echo "... libft/src/ft_isprint.i"
 	@echo "... libft/src/ft_isprint.s"
+	@echo "... libft/src/ft_isspace.o"
+	@echo "... libft/src/ft_isspace.i"
+	@echo "... libft/src/ft_isspace.s"
 	@echo "... libft/src/ft_itoa.o"
 	@echo "... libft/src/ft_itoa.i"
 	@echo "... libft/src/ft_itoa.s"

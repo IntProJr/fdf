@@ -7,6 +7,7 @@ CMakeFiles/fdf.dir/libft/src/ft_abs.c.o: ../libft/src/ft_abs.c
 CMakeFiles/fdf.dir/libft/src/ft_atoi.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/src/ft_atoi.c.o: ../libft/src/ft_atoi.c
 
+CMakeFiles/fdf.dir/libft/src/ft_atoi_base.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/src/ft_atoi_base.c.o: ../libft/src/ft_atoi_base.c
 
 CMakeFiles/fdf.dir/libft/src/ft_bzero.c.o: ../libft/includes/libft.h
@@ -32,6 +33,9 @@ CMakeFiles/fdf.dir/libft/src/ft_isdigit.c.o: ../libft/src/ft_isdigit.c
 
 CMakeFiles/fdf.dir/libft/src/ft_isprint.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/src/ft_isprint.c.o: ../libft/src/ft_isprint.c
+
+CMakeFiles/fdf.dir/libft/src/ft_isspace.c.o: ../libft/includes/libft.h
+CMakeFiles/fdf.dir/libft/src/ft_isspace.c.o: ../libft/src/ft_isspace.c
 
 CMakeFiles/fdf.dir/libft/src/ft_itoa.c.o: ../libft/includes/libft.h
 CMakeFiles/fdf.dir/libft/src/ft_itoa.c.o: ../libft/src/ft_itoa.c
